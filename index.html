@@ -315,7 +315,7 @@
                     <p class="text-slate-400 text-sm">Our procurement team will review your specifications and issue a formal quote.</p>
                 </div>
 
-    <form class="space-y-6">
+   <form class="space-y-6">
         <div>
             <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">CONTACT PERSON / CORPORATE TITLE</label>
             <input type="text" placeholder="e.g. John Doe / Procurement Manager" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-amber-500 transition-colors">
@@ -341,13 +341,64 @@
             <div>
                 <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">TARGET DESTINATION</label>
                 <select class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-amber-500 transition-colors">
-                    <option value="" disabled selected>Select Country / Destination</option>
-                    <option value="uae">Middle East (UAE / Gulf)</option>
-                    <option value="eu">Europe (EU Zone)</option>
-                    <option value="africa">Africa</option>
-                    <option value="asia">Asia</option>
+                    <option value="" disabled selected>Select Target Destination</option>
+                    <optgroup label="GCC / Middle East">
+                        <option value="gcc-uae">GCC — UAE (United Arab Emirates)</option>
+                        <option value="gcc-oman">GCC — Oman</option>
+                        <option value="gcc-ksa">GCC — Saudi Arabia</option>
+                        <option value="gcc-qatar">GCC — Qatar / Kuwait / Bahrain</option>
+                    </optgroup>
+                    <optgroup label="Asia">
+                        <option value="asia-bd">Asia — Bangladesh</option>
+                        <option value="asia-np">Asia — Nepal (Transit Trade)</option>
+                        <option value="asia-kr">Asia — South Korea</option>
+                        <option value="asia-in">Asia — India</option>
+                        <option value="asia-sea">Asia — Southeast Asia</option>
+                    </optgroup>
+                    <optgroup label="Europe">
+                        <option value="eu-west">Europe — EU Central / West</option>
+                        <option value="eu-med">Europe — Mediterranean</option>
+                        <option value="eu-uk">Europe — United Kingdom</option>
+                    </optgroup>
+                    <optgroup label="Africa">
+                        <option value="af-east">Africa — East Coast (Kenya / Tanzania)</option>
+                        <option value="af-south">Africa — Southern Region</option>
+                        <option value="af-west">Africa — West / North Coast</option>
+                    </optgroup>
                 </select>
             </div>
+        </div>
+
+        <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">DESIRED DISCHARGE PORT / DESTINATION HUB</label>
+            <select class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-amber-500 transition-colors">
+                <option value="" disabled selected>Select Primary Port of Discharge</option>
+                <optgroup label="Middle East (GCC) Ports">
+                    <option value="jebel-ali">Jebel Ali Port (Dubai, UAE)</option>
+                    <option value="khalifa">Khalifa Port (Abu Dhabi, UAE)</option>
+                    <option value="sohar">Sohar Port / Sultan Qaboos (Oman)</option>
+                    <option value="dammam">King Abdul Aziz Port / Dammam (KSA)</option>
+                    <option value="jeddah">Jeddah Islamic Port (KSA)</option>
+                    <option value="hamad">Hamad Port (Qatar) / Shuwaikh (Kuwait)</option>
+                </optgroup>
+                <optgroup label="Asia Ports & Logistics Hubs">
+                    <option value="chittagong">Chittagong Port / Mongla (Bangladesh)</option>
+                    <option value="birgunj">ICD Birgunj via Kolkata/Haldia (Nepal Transit)</option>
+                    <option value="busan">Busan Port / Incheon (South Korea)</option>
+                    <option value="nhava-sheva">Nhava Sheva (JNPT) / Chennai (India)</option>
+                </optgroup>
+                <optgroup label="Europe Ports">
+                    <option value="rotterdam">Port of Rotterdam / Antwerp (EU Hub)</option>
+                    <option value="hamburg">Port of Hamburg (Germany)</option>
+                    <option value="felixstowe">Port of Felixstowe (UK)</option>
+                </optgroup>
+                <optgroup label="Africa Ports">
+                    <option value="mombasa">Port of Mombasa (Kenya / East Africa)</option>
+                    <option value="dar-es-salaam">Dar es Salaam (Tanzania)</option>
+                    <option value="durban">Port of Durban (South Africa)</option>
+                </optgroup>
+                <option value="other-port">Other Port / Inland Dry Port (Detail below)</option>
+            </select>
         </div>
 
         <div>
@@ -357,13 +408,13 @@
 
         <div>
             <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">ORDER VOLUME & SPECIFICATIONS</label>
-            <textarea rows="4" placeholder="Detail your quantity, target delivery timeline, and port requirements..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-amber-500 transition-colors"></textarea>
+            <textarea rows="4" placeholder="Detail your quantity, target delivery timeline, specific ICD/port requirements..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-amber-500 transition-colors"></textarea>
         </div>
 
         <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3.5 px-6 rounded-lg transition-colors shadow-lg shadow-amber-500/20">
             Submit Commercial Inquiry
         </button>
-    </form>            
+    </form>             
             </div>
         </div>
     </section>
