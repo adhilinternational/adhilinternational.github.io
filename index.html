@@ -315,49 +315,55 @@
                     <p class="text-slate-400 text-sm">Our procurement team will review your specifications and issue a formal quote.</p>
                 </div>
 
-                <form class="space-y-6">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs font-bold text-slate-300 uppercase mb-2">Corporate Title / Contact Person</label>
-                            <input type="text" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3.5 text-sm text-white focus:ring-2 focus:ring-brand-amber outline-none" placeholder="e.g. Dr. Adhilsha / Director">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-slate-300 uppercase mb-2">Official Email</label>
-                            <input type="email" class="w-full bg-slate-800 border border-slate-700 rounded-xl p-3.5 text-sm text-slate-400 outline-none cursor-not-allowed" value="adhilinternational.official@gmail.com" readonly>
-                        </div>
-                    </div>
+    <form class="space-y-6">
+        <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">CONTACT PERSON / CORPORATE TITLE</label>
+            <input type="text" placeholder="e.g. John Doe / Procurement Manager" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-amber-500 transition-colors">
+        </div>
 
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs font-bold text-slate-300 uppercase mb-2">Required Commodity</label>
-                            <select class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3.5 text-sm text-white focus:ring-2 focus:ring-brand-amber outline-none">
-                                <option>Medical Devices & Consumables</option>
-                                <option>Readymade Garments / RMG</option>
-                                <option>Nuts & Spices</option>
-                                <option>Cotton Yarn</option>
-                                <option>Structural Steel</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-slate-300 uppercase mb-2">Target Destination</label>
-                            <select class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3.5 text-sm text-white focus:ring-2 focus:ring-brand-amber outline-none">
-                                <option>Middle East (UAE)</option>
-                                <option>Europe</option>
-                                <option>Africa</option>
-                                <option>Asia (Nepal / S. Korea / Bangladesh)</option>
-                            </select>
-                        </div>
-                    </div>
+        <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">OFFICIAL EMAIL</label>
+            <input type="email" placeholder="Enter your official email address" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-amber-500 transition-colors">
+        </div>
 
-                    <div>
-                        <label class="block text-xs font-bold text-slate-300 uppercase mb-2">Order Volume & Specifications</label>
-                        <textarea rows="4" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3.5 text-sm text-white focus:ring-2 focus:ring-brand-amber outline-none" placeholder="Detail your quantity, target delivery timeline, and port requirements..."></textarea>
-                    </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">REQUIRED COMMODITY</label>
+                <select class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-amber-500 transition-colors">
+                    <option value="" disabled selected>Select Commodity</option>
+                    <option value="medical">Medical Devices & Consumables</option>
+                    <option value="agro">Agro Commodities (Nuts & Spices)</option>
+                    <option value="steel">Cotton Yarn & Industrial Steel</option>
+                    <option value="rmg">RMG Apparel & Textiles</option>
+                </select>
+            </div>
 
-                    <button type="button" class="w-full bg-gradient-to-r from-brand-amber to-brand-gold text-brand-dark font-extrabold py-4 rounded-xl text-sm shadow-lg shadow-amber-500/20 hover:opacity-95 transition-opacity">
-                        Submit Commercial Inquiry
-                    </button>
-                </form>
+            <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">TARGET DESTINATION</label>
+                <select class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-amber-500 transition-colors">
+                    <option value="" disabled selected>Select Country / Destination</option>
+                    <option value="uae">Middle East (UAE / Gulf)</option>
+                    <option value="eu">Europe (EU Zone)</option>
+                    <option value="africa">Africa</option>
+                    <option value="asia">Asia</option>
+                </select>
+            </div>
+        </div>
+
+        <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">ATTACH SPECIFICATIONS / DOCUMENTS (PDF, DOC, IMAGES)</label>
+            <input type="file" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-slate-400 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-slate-800 file:text-amber-500 hover:file:bg-slate-700 transition-colors cursor-pointer">
+        </div>
+
+        <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">ORDER VOLUME & SPECIFICATIONS</label>
+            <textarea rows="4" placeholder="Detail your quantity, target delivery timeline, and port requirements..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-amber-500 transition-colors"></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3.5 px-6 rounded-lg transition-colors shadow-lg shadow-amber-500/20">
+            Submit Commercial Inquiry
+        </button>
+    </form>            
             </div>
         </div>
     </section>
