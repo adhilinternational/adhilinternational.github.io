@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADHIL INTERNATIONAL | Global Cross-Border Trade & Procurement</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#080d1a',
+                            navy: '#0f172a',
+                            slate: '#1e293b',
+                            amber: '#f59e0b',
+                            gold: '#d97706',
+                            accent: '#3b82f6'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-dark text-slate-100 font-sans antialiased selection:bg-brand-amber selection:text-brand-dark">
+
+    <!-- Top Utility Bar -->
+    <div class="bg-brand-navy border-b border-slate-800/80 text-xs text-slate-400 py-2 px-6 hidden lg:block">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <span class="flex items-center"><span class="w-2 h-2 rounded-full bg-emerald-500 inline-block mr-2 animate-pulse"></span> Operating Hubs: Dhaka (BD) | Chennai (IN)</span>
+                <span>Clinically Led Procurement House</span>
+            </div>
+            <div class="flex items-center space-x-6">
+                <span>Compliance: DGDA Approved | ISO 13485 | SAFTA & CE Protocol</span>
+                <span class="text-slate-200 font-mono">adhilinternational.official@gmail.com</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="bg-brand-dark/90 backdrop-blur-md sticky top-0 z-50 border-b border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-amber to-amber-300 flex items-center justify-center font-black text-brand-dark text-xl shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform">A</div>
+                <div>
+                    <span class="text-2xl font-black tracking-tight text-white block leading-none">ADHIL</span>
+                    <span class="text-[10px] font-bold tracking-[0.25em] text-brand-amber block mt-1 uppercase">International</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-300">
+                <a href="#about" class="hover:text-brand-amber transition-colors">Philosophy</a>
+                <a href="#sourcing-matrix" class="hover:text-brand-amber transition-colors">Sourcing Matrix</a>
+                <a href="#interactive-router" class="hover:text-brand-amber transition-colors">Trade Router</a>
+                <a href="#destinations" class="hover:text-brand-amber transition-colors">Global Footprint</a>
+            </nav>
+
+            <a href="#contact" class="bg-gradient-to-r from-brand-amber to-brand-gold hover:opacity-95 text-brand-dark font-extrabold px-5 py-2.5 rounded-xl text-sm shadow-lg shadow-amber-500/10 transition-all transform hover:-translate-y-0.5">
+                Initiate B2B Trade
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section with Motion Background UI -->
+    <section class="relative pt-16 pb-24 lg:pt-24 lg:pb-32 overflow-hidden border-b border-slate-800/80">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-800/40 via-brand-dark to-brand-dark opacity-70"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-7 space-y-8">
+                <div class="inline-flex items-center space-x-2 bg-slate-800/80 border border-slate-700/60 rounded-full px-4 py-1.5 backdrop-blur-sm">
+                    <span class="w-2 h-2 rounded-full bg-brand-amber"></span>
+                    <span class="text-xs font-bold text-slate-300 tracking-wide uppercase">Zero-Manufacturing Sourcing & Freight Brokerage</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.15] tracking-tight">
+                    Securing Quality Trade. <br/>
+                    <span class="bg-gradient-to-r from-brand-amber via-amber-200 to-amber-500 bg-clip-text text-transparent">Delivering Global Supply.</span>
+                </h1>
+
+                <p class="text-slate-400 text-lg max-w-2xl leading-relaxed">
+                    ADHIL INTERNATIONAL orchestrates full-spectrum cross-border procurement between core production hubs in <strong class="text-slate-200">India & Bangladesh</strong> and destination markets across <strong class="text-slate-200">The Middle East, Europe, Africa, and Asia</strong>.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                    <a href="#interactive-router" class="bg-brand-amber hover:bg-brand-gold text-brand-dark font-bold px-8 py-4 rounded-xl text-center shadow-lg shadow-amber-500/20 transition-all flex items-center justify-center space-x-2">
+                        <span>Launch Trade Calculator</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
+                    <a href="#sourcing-matrix" class="bg-slate-800/80 hover:bg-slate-800 text-slate-200 font-semibold px-8 py-4 rounded-xl text-center border border-slate-700 transition-all">
+                        Explore Commodities
+                    </a>
+                </div>
+
+                <!-- Trust Micro-Metrics -->
+                <div class="grid grid-cols-3 gap-6 pt-6 border-t border-slate-800/80 text-left">
+                    <div>
+                        <div class="text-2xl font-black text-white">100%</div>
+                        <div class="text-xs text-slate-400 mt-0.5">Vetted Procurement</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-black text-white">4 Regions</div>
+                        <div class="text-xs text-slate-400 mt-0.5">Primary Destinations</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-black text-white">Clinically Led</div>
+                        <div class="text-xs text-slate-400 mt-0.5">Medical Oversight</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Interactive Preview Card -->
+            <div class="lg:col-span-5 bg-gradient-to-b from-slate-800/90 to-brand-navy p-8 rounded-3xl border border-slate-700/70 shadow-2xl space-y-6">
+                <div class="flex justify-between items-center border-b border-slate-700/60 pb-4">
+                    <h3 class="text-base font-bold text-white flex items-center">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 mr-2"></span> Active Supply Pipelines
+                    </h3>
+                    <span class="text-xs font-mono text-slate-400">STATUS: LIVE</span>
+                </div>
+
+                <div class="space-y-4 text-sm">
+                    <div class="p-4 bg-slate-900/60 rounded-2xl border border-slate-800 flex justify-between items-center">
+                        <div>
+                            <div class="font-bold text-white">India ➔ Middle East / BD</div>
+                            <div class="text-xs text-slate-400 mt-0.5">Medical Equipment, Spices, Cotton Yarn</div>
+                        </div>
+                        <span class="px-3 py-1 bg-amber-500/10 border border-amber-500/20 text-brand-amber text-xs font-bold rounded-full">Primary</span>
+                    </div>
+
+                    <div class="p-4 bg-slate-900/60 rounded-2xl border border-slate-800 flex justify-between items-center">
+                        <div>
+                            <div class="font-bold text-white">Bangladesh ➔ Europe / Africa</div>
+                            <div class="text-xs text-slate-400 mt-0.5">RMG Textiles, Commercial Steel</div>
+                        </div>
+                        <span class="px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold rounded-full">Duty-Free</span>
+                    </div>
+                </div>
+
+                <div class="pt-2 text-xs text-slate-400 bg-slate-900/40 p-4 rounded-xl border border-slate-800">
+                    <strong class="text-slate-200">Direct Brokerage Assurance:</strong> We securely procure goods strictly per client specification, manage customs clearance, and execute door-to-port delivery.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Sourcing Matrix (Tabbed UX) -->
+    <section id="sourcing-matrix" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="text-center space-y-4 max-w-3xl mx-auto mb-16">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-brand-amber">Global Procurement Catalog</h2>
+            <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Our Dual Sourcing Hubs</h3>
+            <p class="text-slate-400 text-sm">Switch between procurement origin hubs to inspect our verified product categories.</p>
+
+            <!-- Interactive Tab Controller -->
+            <div class="inline-flex p-1.5 bg-slate-800/80 rounded-2xl border border-slate-700/80 mt-6">
+                <button id="btn-india" onclick="switchHub('india')" class="px-6 py-3 rounded-xl font-bold text-sm transition-all bg-brand-amber text-brand-dark shadow-md">
+                    🇮🇳 India Sourcing Hub
+                </button>
+                <button id="btn-bd" onclick="switchHub('bd')" class="px-6 py-3 rounded-xl font-bold text-sm text-slate-300 transition-all hover:text-white">
+                    🇧🇩 Bangladesh Sourcing Hub
+                </button>
+            </div>
+        </div>
+
+        <!-- India Content Panel -->
+        <div id="panel-india" class="grid md:grid-cols-3 gap-8">
+            <div class="bg-slate-800/40 border border-slate-700/60 p-8 rounded-3xl hover:border-brand-amber/50 transition-all group">
+                <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-brand-amber text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">🩺</div>
+                <h4 class="text-xl font-bold text-white mb-2">Medical Equipment & Consumables</h4>
+                <p class="text-slate-400 text-sm leading-relaxed mb-4">Class A & B patient monitors, ICU diagnostics, surgical instruments, and hospital consumables. Clinically audited under MBBS supervision.</p>
+                <div class="text-xs font-mono text-brand-amber">REGULATORY: DGDA / ISO 13485</div>
+            </div>
+
+            <div class="bg-slate-800/40 border border-slate-700/60 p-8 rounded-3xl hover:border-brand-amber/50 transition-all group">
+                <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-brand-amber text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">🌰</div>
+                <h4 class="text-xl font-bold text-white mb-2">Agro Commodities (Nuts & Spices)</h4>
+                <p class="text-slate-400 text-sm leading-relaxed mb-4">Bulk raw and processed cashew nuts, almonds, premium cardamom, and industrial spice exports sourced directly from processing clusters.</p>
+                <div class="text-xs font-mono text-brand-amber">SPECS: Bulk B2B Shipments</div>
+            </div>
+
+            <div class="bg-slate-800/40 border border-slate-700/60 p-8 rounded-3xl hover:border-brand-amber/50 transition-all group">
+                <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-brand-amber text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">🧵</div>
+                <h4 class="text-xl font-bold text-white mb-2">Cotton Yarn & Industrial Steel</h4>
+                <p class="text-slate-400 text-sm leading-relaxed mb-4">High-count cotton yarn for textile manufacturing alongside heavy commercial steel rods and structural components.</p>
+                <div class="text-xs font-mono text-brand-amber">SPECS: Industrial Grade</div>
+            </div>
+        </div>
+
+        <!-- Bangladesh Content Panel (Hidden by default) -->
+        <div id="panel-bd" class="grid md:grid-cols-2 gap-8 hidden">
+            <div class="bg-slate-800/40 border border-slate-700/60 p-8 rounded-3xl hover:border-brand-amber/50 transition-all group">
+                <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">👔</div>
+                <h4 class="text-xl font-bold text-white mb-2">Readymade Garments (RMG) & Textiles</h4>
+                <p class="text-slate-400 text-sm leading-relaxed mb-4">Woven apparel, knitwear, denim, and institutional uniforms procured from certified, compliant Bangladeshi apparel factories.</p>
+                <div class="text-xs font-mono text-emerald-400">DESTINATIONS: Europe, Middle East, Africa</div>
+            </div>
+
+            <div class="bg-slate-800/40 border border-slate-700/60 p-8 rounded-3xl hover:border-brand-amber/50 transition-all group">
+                <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">🏗️</div>
+                <h4 class="text-xl font-bold text-white mb-2">Structural & Commercial Steel</h4>
+                <p class="text-slate-400 text-sm leading-relaxed mb-4">Export-ready rebar, mild steel billets, and fabricated structural components for regional infrastructure projects.</p>
+                <div class="text-xs font-mono text-emerald-400">DESTINATIONS: Nepal, Africa, Regional Asia</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Trade & Logistics Calculator -->
+    <section id="interactive-router" class="py-20 bg-slate-900 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="bg-gradient-to-br from-slate-800 to-brand-navy p-8 md:p-12 rounded-3xl border border-slate-700 shadow-2xl">
+                <div class="max-w-2xl mb-10">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-amber">Dynamic Logistics Engine</span>
+                    <h3 class="text-3xl font-extrabold text-white mt-2">Interactive Trade Route Evaluator</h3>
+                    <p class="text-slate-400 text-sm mt-1">Select your commodity and intended destination to calculate estimated shipping parameters and compliance frameworks.</p>
+                </div>
+
+                <div class="grid lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-5 space-y-6">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-300 uppercase mb-2">Select Commodity</label>
+                            <select id="calc-commodity" onchange="calculateRoute()" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-4 text-sm text-white focus:ring-2 focus:ring-brand-amber outline-none">
+                                <option value="med">Medical Devices & Consumables (from India)</option>
+                                <option value="garments">Readymade Garments / RMG (from Bangladesh)</option>
+                                <option value="nuts">Agro: Nuts & Spices (from India)</option>
+                                <option value="steel">Structural Steel (from BD / India)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-300 uppercase mb-2">Select Target Destination</label>
+                            <select id="calc-destination" onchange="calculateRoute()" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-4 text-sm text-white focus:ring-2 focus:ring-brand-amber outline-none">
+                                <option value="me">Middle East (UAE / Gulf)</option>
+                                <option value="eu">Europe (EU Countries)</option>
+                                <option value="af">Africa (East / West Hubs)</option>
+                                <option value="asia">Asia (Nepal / S. Korea / BD)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Output Interactive Card -->
+                    <div class="lg:col-span-7 bg-slate-900/90 p-8 rounded-2xl border border-slate-700/80 space-y-4">
+                        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 border-b border-slate-800 pb-3">Route Output Summary</div>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <div class="text-xs text-slate-400">Source Hub</div>
+                                <div id="out-source" class="text-lg font-bold text-white mt-1">India Hub</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400">Estimated Transit</div>
+                                <div id="out-transit" class="text-lg font-bold text-brand-amber mt-1">7 - 12 Sea Days</div>
+                            </div>
+                        </div>
+
+                        <div class="pt-2">
+                            <div class="text-xs text-slate-400">Compliance & Trade Framework</div>
+                            <div id="out-compliance" class="text-sm font-semibold text-slate-200 mt-1 bg-slate-800 p-3 rounded-lg border border-slate-700">
+                                CDSCO / ISO 13485 Certification + UAE Customs Clearance Dossier
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Destinations Network -->
+    <section id="destinations" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="text-center space-y-4 max-w-3xl mx-auto mb-16">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-brand-amber">Global Distribution Channels</h2>
+            <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Where We Operate</h3>
+            <p class="text-slate-400 text-sm">Providing compliant cross-border logistics to four primary global economic zones.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-slate-800/30 border border-slate-700/60 p-6 rounded-2xl">
+                <div class="text-3xl mb-4">🕌</div>
+                <h4 class="text-lg font-bold text-white">Middle East (UAE)</h4>
+                <p class="text-xs text-slate-400 mt-2">Distribution of nuts, spices, textiles, and structural steel via Dubai port hubs.</p>
+            </div>
+
+            <div class="bg-slate-800/30 border border-slate-700/60 p-6 rounded-2xl">
+                <div class="text-3xl mb-4">🇪🇺</div>
+                <h4 class="text-lg font-bold text-white">Europe</h4>
+                <p class="text-xs text-slate-400 mt-2">Leveraging preferential trade pacts for apparel and certified industrial sourcing.</p>
+            </div>
+
+            <div class="bg-slate-800/30 border border-slate-700/60 p-6 rounded-2xl">
+                <div class="text-3xl mb-4">🌍</div>
+                <h4 class="text-lg font-bold text-white">Africa</h4>
+                <p class="text-xs text-slate-400 mt-2">Exporting medical consumables, garments, steel, and agricultural packaging.</p>
+            </div>
+
+            <div class="bg-slate-800/30 border border-slate-700/60 p-6 rounded-2xl">
+                <div class="text-3xl mb-4">🌏</div>
+                <h4 class="text-lg font-bold text-white">Asia</h4>
+                <p class="text-xs text-slate-400 mt-2">Serving Nepal transit trade, South Korea leather/textile lines, and Bangladesh imports.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- B2B Inquiry Form -->
+    <section id="contact" class="py-20 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="bg-brand-dark p-8 md:p-12 rounded-3xl border border-slate-700 shadow-2xl">
+                <div class="text-center space-y-2 mb-10">
+                    <h3 class="text-3xl font-extrabold text-white">Submit a Trade Inquiry</h3>
+                    <p class="text-slate-400 text-sm">Our procurement team will review your specifications and issue a formal quote.</p>
+                </div>
+
+                <form class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-300 uppercase mb-2">Corporate Title / Contact Person</label>
+                            <input type="text" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3.5 text-sm text-white focus:ring-2 focus:ring-brand-amber outline-none" placeholder="e.g. Dr. Adhilsha / Director">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-300 uppercase mb-2">Official Email</label>
+                            <input type="email" class="w-full bg-slate-800 border border-slate-700 rounded-xl p-3.5 text-sm text-slate-400 outline-none cursor-not-allowed" value="adhilinternational.official@gmail.com" readonly>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-300 uppercase mb-2">Required Commodity</label>
+                            <select class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3.5 text-sm text-white focus:ring-2 focus:ring-brand-amber outline-none">
+                                <option>Medical Devices & Consumables</option>
+                                <option>Readymade Garments / RMG</option>
+                                <option>Nuts & Spices</option>
+                                <option>Cotton Yarn</option>
+                                <option>Structural Steel</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-300 uppercase mb-2">Target Destination</label>
+                            <select class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3.5 text-sm text-white focus:ring-2 focus:ring-brand-amber outline-none">
+                                <option>Middle East (UAE)</option>
+                                <option>Europe</option>
+                                <option>Africa</option>
+                                <option>Asia (Nepal / S. Korea / Bangladesh)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase mb-2">Order Volume & Specifications</label>
+                        <textarea rows="4" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3.5 text-sm text-white focus:ring-2 focus:ring-brand-amber outline-none" placeholder="Detail your quantity, target delivery timeline, and port requirements..."></textarea>
+                    </div>
+
+                    <button type="button" class="w-full bg-gradient-to-r from-brand-amber to-brand-gold text-brand-dark font-extrabold py-4 rounded-xl text-sm shadow-lg shadow-amber-500/20 hover:opacity-95 transition-opacity">
+                        Submit Commercial Inquiry
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark border-t border-slate-800/80 py-8 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>© 2026 ADHIL INTERNATIONAL Group. All Rights Reserved.</div>
+            <div>Cross-Border Trade Brokerage & Logistics Hub</div>
+        </div>
+    </footer>
+
+    <!-- Interactive JavaScript Engine -->
+    <script>
+        function switchHub(hub) {
+            const btnIndia = document.getElementById('btn-india');
+            const btnBd = document.getElementById('btn-bd');
+            const panelIndia = document.getElementById('panel-india');
+            const panelBd = document.getElementById('panel-bd');
+
+            if (hub === 'india') {
+                btnIndia.className = 'px-6 py-3 rounded-xl font-bold text-sm transition-all bg-brand-amber text-brand-dark shadow-md';
+                btnBd.className = 'px-6 py-3 rounded-xl font-bold text-sm text-slate-300 transition-all hover:text-white';
+                panelIndia.classList.remove('hidden');
+                panelBd.classList.add('hidden');
+            } else {
+                btnBd.className = 'px-6 py-3 rounded-xl font-bold text-sm transition-all bg-emerald-500 text-brand-dark shadow-md';
+                btnIndia.className = 'px-6 py-3 rounded-xl font-bold text-sm text-slate-300 transition-all hover:text-white';
+                panelBd.classList.remove('hidden');
+                panelIndia.classList.add('hidden');
+            }
+        }
+
+        function calculateRoute() {
+            const commodity = document.getElementById('calc-commodity').value;
+            const dest = document.getElementById('calc-destination').value;
+            
+            const outSource = document.getElementById('out-source');
+            const outTransit = document.getElementById('out-transit');
+            const outCompliance = document.getElementById('out-compliance');
+
+            if (commodity === 'med' || commodity === 'nuts') {
+                outSource.textContent = 'India Procurement Hub';
+            } else if (commodity === 'garments') {
+                outSource.textContent = 'Bangladesh Procurement Hub';
+            } else {
+                outSource.textContent = 'Dual Hub (BD / India)';
+            }
+
+            if (dest === 'me') {
+                outTransit.textContent = '5 - 9 Sea Days';
+                outCompliance.textContent = 'ISO / CDSCO Dossier + UAE Customs Clearance & Port Attestation';
+            } else if (dest === 'eu') {
+                outTransit.textContent = '14 - 22 Sea Days';
+                outCompliance.textContent = 'CE Marking + EU Duty-Free Preferred Tariff Documentation';
+            } else if (dest === 'af') {
+                outTransit.textContent = '12 - 18 Sea Days';
+                outCompliance.textContent = 'Standard Pre-Shipment Inspection (PSI) + Certificate of Origin';
+            } else {
+                outTransit.textContent = '3 - 8 Transit Days';
+                outCompliance.textContent = 'SAFTA Preferential Duty + Land Port / Transit Clearance';
+            }
+        }
+    </script>
+</body>
+</html>
