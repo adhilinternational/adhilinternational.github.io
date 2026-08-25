@@ -50,21 +50,23 @@
     <header class="bg-brand-dark/90 backdrop-blur-md sticky top-0 z-50 border-b border-slate-800/60">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 <a href="#" class="flex items-center space-x-3 group">
-  <!-- AI Logo Image -->
-  <img src="AI Logo.jpeg" alt="Adhil International Logo" class="w-12 h-12 object-contain rounded-full">
+  <!-- AI Logo Image (Zoomed to Crop Outer Background) -->
+  <div class="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center">
+    <img src="AI Logo.jpeg" alt="Adhil International Logo" class="w-full h-full object-cover scale-[1.45]">
+  </div>
   
-  <!-- Text Stack (Centered ADHIL) -->
+  <!-- Text Stack (Centered ADHIL & Flush Widths) -->
   <div class="flex flex-col justify-center items-center text-center">
     <!-- ADHIL Centered on Top -->
     <span class="font-black text-brand-amber uppercase block leading-none" style="font-size: 19px; letter-spacing: 0.05em;">ADHIL</span>
     
-    <!-- INTERNATIONAL Matched to Tagline Width -->
-    <span class="font-bold text-brand-amber uppercase block leading-none" style="font-size: 10px; letter-spacing: 0.19em; margin-top: 3px;">INTERNATIONAL</span>
+    <!-- INTERNATIONAL Stretched Flush with Tagline -->
+    <span class="font-bold text-brand-amber uppercase block leading-none" style="font-size: 10.5px; letter-spacing: 0.295em; margin-top: 3px;">INTERNATIONAL</span>
     
     <!-- Tagline Base Width -->
     <span class="font-semibold text-slate-300 uppercase block leading-none" style="font-size: 6px; letter-spacing: 0.04em; margin-top: 4px; white-space: nowrap;">YOUR TRUSTED BRIDGE TO GLOBAL GOODS</span>
   </div>
-</a>    
+</a>   
             <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-300">
                 <a href="#about" class="hover:text-brand-amber transition-colors">Philosophy</a>
                 <a href="#sourcing-matrix" class="hover:text-brand-amber transition-colors">Sourcing Matrix</a>
