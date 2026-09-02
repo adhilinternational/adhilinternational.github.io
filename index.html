@@ -357,33 +357,46 @@ background-size:60px 60px;transform:rotate(-5deg);animation:gridMove 22s linear 
 <section id="interactive-router" class="py-20 bg-slate-900/80 border-y border-slate-800">
 <div class="max-w-7xl mx-auto px-6">
 <div class="bg-gradient-to-br from-slate-800 to-brand-navy p-8 md:p-12 rounded-3xl border border-slate-700 shadow-2xl">
-<div class="max-w-3xl mb-10"><span class="text-xs font-bold uppercase tracking-widest text-brand-amber">Dynamic Logistics Engine</span><h3 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Interactive Trade Route Evaluator</h3><p class="text-slate-400 text-sm mt-2">Select your commodity, origin, intended destination and discharge port to generate an indicative route-planning summary.</p></div>
+<div class="max-w-3xl mb-10"><span class="text-xs font-bold uppercase tracking-widest text-brand-amber">Dynamic Logistics Engine</span><h3 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Interactive Trade Route Evaluator</h3><p class="text-slate-400 text-sm mt-2">Select your origin, commodity, target destination and desired discharge port, then launch the evaluator to see an indicative transit-time range and the buyer information required to move into a commercial inquiry.</p></div>
 <div class="grid lg:grid-cols-12 gap-8 items-start">
 <div class="lg:col-span-5 space-y-6">
-<div><label class="label">SELECT ORIGIN HUB</label><select id="calc-origin" onchange="calculateRoute()" class="field"><option value="india">🇮🇳 India — Nationwide Sourcing</option><option value="bd">🇧🇩 Bangladesh — Dhaka / Across Bengal</option><option value="nepal">🇳🇵 Nepal — Nationwide Sourcing</option><option value="dual">🇮🇳🇧🇩🇳🇵 Multi-Hub / Best Available Source</option></select></div>
-<div><label class="label">SELECT COMMODITY</label><select id="calc-commodity" onchange="calculateRoute()" class="field">
-<option value="spices">Agro: Nuts & Spices (India)</option><option value="coir">Coir & Coconut (India)</option><option value="textiles">Cotton Yarn / Textiles</option><option value="garments">Readymade Garments / RMG (Bangladesh)</option><option value="jute">Jute & Sustainable Products (Bangladesh)</option><option value="bags">Bags & Accessories</option><option value="steel">Structural / Commercial Steel</option><option value="food">Food / Agricultural Products</option><option value="medical">Medical Devices & Consumables — Future Specialist</option>
+<div><label class="label">SELECT ORIGIN HUB</label><select id="calc-origin" class="field" required><option value="" disabled selected>Please select origin hub</option><option value="india">🇮🇳 India — Nationwide Sourcing</option><option value="bd">🇧🇩 Bangladesh — Dhaka / Across Bengal</option><option value="nepal">🇳🇵 Nepal — Nationwide Sourcing</option><option value="dual">🇮🇳🇧🇩🇳🇵 Multi-Hub / Best Available Source</option></select></div>
+<div><label class="label">SELECT COMMODITY</label><select id="calc-commodity" class="field" required>
+<option value="" disabled selected>Please select commodity</option><option value="spices">Agro: Nuts & Spices (India)</option><option value="coir">Coir & Coconut (India)</option><option value="textiles">Cotton Yarn / Textiles</option><option value="garments">Readymade Garments / RMG (Bangladesh)</option><option value="jute">Jute & Sustainable Products (Bangladesh)</option><option value="bags">Bags & Accessories</option><option value="steel">Structural / Commercial Steel</option><option value="food">Food / Agricultural Products</option><option value="medical">Medical Devices & Consumables — Future Specialist</option>
 </select></div>
-<div><label class="label">SELECT TARGET DESTINATION</label><select id="calc-destination" onchange="calculateRoute()" class="field">
-<optgroup label="GCC / Middle East"><option value="me">Middle East — UAE / Gulf</option><option value="ksa">Saudi Arabia</option><option value="oman">Oman</option><option value="qatar">Qatar / Kuwait / Bahrain</option></optgroup>
+<div><label class="label">SELECT TARGET DESTINATION</label><select id="calc-destination" class="field" required>
+<option value="" disabled selected>Please select target destination</option><optgroup label="GCC / Middle East"><option value="me">Middle East — UAE / Gulf</option><option value="ksa">Saudi Arabia</option><option value="oman">Oman</option><option value="qatar">Qatar / Kuwait / Bahrain</option></optgroup>
 <optgroup label="Asia"><option value="asia">Asia — Bangladesh / Nepal / South Korea / Southeast Asia</option></optgroup>
 <optgroup label="Europe"><option value="eu">Europe — EU / Mediterranean</option><option value="uk">Europe — United Kingdom</option></optgroup>
 <optgroup label="Africa"><option value="af-east">Africa — East Coast</option><option value="af-south">Africa — Southern Region</option><option value="af-west">Africa — West / North Coast</option></optgroup>
 </select></div>
-<div><label class="label">DESIRED DISCHARGE PORT / DESTINATION HUB</label><select id="calc-port" onchange="calculateRoute()" class="field">
-<option value="jebel-ali">Jebel Ali Port (Dubai, UAE)</option><option value="khalifa">Khalifa Port (Abu Dhabi, UAE)</option><option value="sohar">Sohar Port / Oman</option><option value="dammam">King Abdul Aziz Port / Dammam</option><option value="jeddah">Jeddah Islamic Port</option><option value="hamad">Hamad Port / Shuwaikh</option>
+<div><label class="label">DESIRED DISCHARGE PORT / DESTINATION HUB</label><select id="calc-port" class="field" required>
+<option value="" disabled selected>Please select desired discharge port</option><option value="jebel-ali">Jebel Ali Port (Dubai, UAE)</option><option value="khalifa">Khalifa Port (Abu Dhabi, UAE)</option><option value="sohar">Sohar Port / Oman</option><option value="dammam">King Abdul Aziz Port / Dammam</option><option value="jeddah">Jeddah Islamic Port</option><option value="hamad">Hamad Port / Shuwaikh</option>
 <option value="chittagong">Chittagong / Mongla (Bangladesh)</option><option value="birgunj">ICD Birgunj via Kolkata/Haldia</option><option value="busan">Busan / Incheon (South Korea)</option><option value="nhava-sheva">Nhava Sheva (JNPT) / Chennai</option>
 <option value="rotterdam">Rotterdam / Antwerp</option><option value="hamburg">Hamburg</option><option value="felixstowe">Felixstowe</option><option value="mombasa">Mombasa</option><option value="dar">Dar es Salaam</option><option value="durban">Durban</option><option value="other">Other Port / Inland Dry Port</option>
 </select></div>
+<div class="rounded-2xl border border-slate-700/70 bg-slate-950/45 p-5">
+<div class="text-xs font-extrabold uppercase tracking-wider text-brand-amber">What you will receive</div>
+<p class="text-sm text-slate-400 mt-2 leading-relaxed">Launch the evaluator after selecting your route. It will generate an indicative transit-time range and a practical document checklist for the selected shipment.</p>
+</div>
+<button type="button" onclick="launchRouteEvaluator()" class="w-full bg-brand-amber hover:bg-brand-gold text-brand-dark font-extrabold px-6 py-4 rounded-xl shadow-lg shadow-amber-500/20 transition">Launch Trade Route Evaluator →</button>
 </div>
 
-<div class="lg:col-span-7 bg-slate-950/80 p-8 rounded-2xl border border-slate-700/80 space-y-5">
+<div id="route-output" class="lg:col-span-7 bg-slate-950/80 p-8 rounded-2xl border border-slate-700/80 space-y-5 opacity-75">
 <div class="text-xs font-bold uppercase tracking-wider text-slate-400 border-b border-slate-800 pb-3">Route Output Summary</div>
-<div class="grid sm:grid-cols-2 gap-5"><div><div class="text-xs text-slate-400">Source Hub</div><div id="out-source" class="text-lg font-bold text-white mt-1">India Procurement Hub</div></div><div><div class="text-xs text-slate-400">Estimated Transit Planning</div><div id="out-transit" class="text-lg font-bold text-brand-amber mt-1">Indicative — verify with freight forwarder</div></div></div>
-<div><div class="text-xs text-slate-400">Selected Discharge Port</div><div id="out-port" class="text-lg font-bold text-white mt-1">Jebel Ali Port (Dubai, UAE)</div></div>
-<div><div class="text-xs text-slate-400">Compliance & Trade Framework</div><div id="out-compliance" class="text-sm font-semibold text-slate-200 mt-1 bg-slate-800 p-4 rounded-lg border border-slate-700">Product classification, supplier documentation, export documents and destination customs requirements.</div></div>
-<div><div class="text-xs text-slate-400">Planning Note</div><div id="out-note" class="text-sm text-slate-400 mt-1">This evaluator is an indicative planning interface, not a freight quotation or legal/compliance certification.</div></div>
-<a href="#contact" class="inline-flex bg-brand-amber hover:bg-brand-gold text-brand-dark font-bold px-5 py-3 rounded-xl mt-2">Use This Route in a Commercial Inquiry →</a>
+<div id="route-placeholder" class="py-6">
+<div class="text-lg font-extrabold text-white">Your route result will appear here.</div>
+<p class="text-sm text-slate-400 mt-2 leading-relaxed">Select the origin, commodity, target destination and discharge port, then press <strong class="text-slate-200">Launch Trade Route Evaluator</strong>.</p>
+</div>
+<div id="route-results" class="hidden space-y-5">
+<div class="grid sm:grid-cols-2 gap-5">
+<div><div class="text-xs text-slate-400">Source Hub</div><div id="out-source" class="text-lg font-bold text-white mt-1"></div></div>
+<div><div class="text-xs text-slate-400">Estimated Transit Time</div><div id="out-transit" class="text-lg font-bold text-brand-amber mt-1"></div></div>
+</div>
+<div><div class="text-xs text-slate-400">Selected Discharge Port</div><div id="out-port" class="text-lg font-bold text-white mt-1"></div></div>
+<div><div class="text-xs text-slate-400">Documents / Information Required From Buyer</div><div id="out-documents" class="text-sm font-semibold text-slate-200 mt-1 bg-slate-800 p-4 rounded-lg border border-slate-700 leading-relaxed"></div></div>
+<div><div class="text-xs text-slate-400">Planning Note</div><div id="out-note" class="text-sm text-slate-400 mt-1 leading-relaxed"></div></div>
+<button type="button" onclick="useRouteInCommercialInquiry()" class="inline-flex bg-brand-amber hover:bg-brand-gold text-brand-dark font-bold px-5 py-3 rounded-xl mt-2 transition">Use This Summary in Commercial Inquiry →</button>
 </div>
 </div>
 </div>
@@ -414,10 +427,10 @@ background-size:60px 60px;transform:rotate(-5deg);animation:gridMove 22s linear 
 
 <!-- CONTACT — ORIGINAL CORE FIELDS PRESERVED + EXPANDED -->
 <section id="contact" class="py-20 bg-slate-900 border-t border-slate-800"><div class="max-w-4xl mx-auto px-6"><div class="bg-brand-dark p-8 md:p-12 rounded-3xl border border-slate-700 shadow-2xl">
-<div class="text-center mb-10"><h3 class="text-3xl font-extrabold text-white">Submit a Trade Inquiry</h3><p class="text-slate-400 text-sm mt-2">Send your product requirement, target market and logistics details. We can use the information as a sourcing brief.</p></div>
+<div class="text-center mb-10"><h3 class="text-3xl font-extrabold text-white">Submit a Trade Inquiry</h3><p class="text-slate-400 text-sm mt-2">Complete the buyer and commercial details below so we can review the requirement and move toward a commercial inquiry.</p><div class="mt-5 rounded-2xl border border-slate-700/70 bg-slate-950/45 px-5 py-4 text-left text-sm text-slate-400 leading-relaxed"><span class="font-bold text-brand-amber">Route handoff:</span> If you came here from the Interactive Trade Route Evaluator, your selected origin, commodity, target destination and discharge port are carried into the fields below automatically. Please complete the remaining buyer-specific details and upload any supporting material.</div></div>
 
-<form action="https://formsubmit.co/adhilinternational.official@gmail.com" method="POST" enctype="multipart/form-data" class="space-y-6">
-<input type="hidden" name="_subject" value="ADHIL INTERNATIONAL — New Commercial Trade Inquiry"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table">
+<form id="commercial-inquiry-form" action="https://formsubmit.co/adhilinternational.official@gmail.com" method="POST" enctype="multipart/form-data" class="space-y-6">
+<input type="hidden" name="_subject" value="ADHIL INTERNATIONAL — New Commercial Trade Inquiry"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table"><input type="hidden" name="route_origin_hub" id="route-origin-hidden" value="">
 
 <div class="grid md:grid-cols-2 gap-6">
 <div><label class="label">CONTACT PERSON</label><input required type="text" name="contact_person" placeholder="e.g. John Doe" class="field"></div>
@@ -457,16 +470,27 @@ background-size:60px 60px;transform:rotate(-5deg);animation:gridMove 22s linear 
 <option>Other Port / Inland Dry Port</option>
 </select></div>
 
-<div><label class="label">PRODUCT SPECIFICATION</label><textarea name="product_specification" rows="4" placeholder="Grade, material, size, quality standard, packaging, branding/OEM requirement, HS code if known, etc." class="field"></textarea></div>
+<div><label class="label">PRODUCT SPECIFICATION</label><textarea name="product_specification" rows="4" placeholder="Grade, material, size, quality standard, packaging, branding/OEM requirement and other product specifications." class="field"></textarea></div>
+
+<div class="grid md:grid-cols-2 gap-6">
+<div><label class="label">PREFERRED INCOTERM / TRADE TERM</label><select name="incoterm" class="field">
+<option value="" selected>Select Preferred Incoterm / Trade Term</option>
+<option>EXW — Ex Works</option><option>FCA — Free Carrier</option><option>FOB — Free On Board</option><option>CFR — Cost and Freight</option><option>CIF — Cost, Insurance and Freight</option><option>CPT — Carriage Paid To</option><option>CIP — Carriage and Insurance Paid To</option><option>DAP — Delivered at Place</option><option>DPU — Delivered at Place Unloaded</option><option>DDP — Delivered Duty Paid</option><option>Other / To Be Discussed</option>
+</select></div>
+<div><label class="label">PREFERRED PAYMENT TERMS</label><select name="payment_terms" class="field">
+<option value="" selected>Select Preferred Payment Terms</option>
+<option>Advance Payment / T&amp;T</option><option>Letter of Credit (LC) — At Sight</option><option>Letter of Credit (LC) — Usance</option><option>CAD — Cash Against Documents</option><option>D/P — Documents Against Payment</option><option>D/A — Documents Against Acceptance</option><option>Open Account</option><option>Other / To Be Discussed</option>
+</select></div>
+</div>
 
 <div><label class="label">ATTACH SPECIFICATIONS / DOCUMENTS (MULTIPLE FILES • PDF, DOC, IMAGES)</label><input type="file" name="attachment[]" multiple accept=".pdf,.doc,.docx,.png,.jpg,.jpeg,.webp,.xls,.xlsx,.csv" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-slate-400 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:bg-slate-800 file:text-amber-500"><div class="text-[11px] text-slate-500 mt-2">Maximum 10 MB per upload area.</div></div>
 
 <div><label class="label">PRODUCT VISUAL / REFERENCE IMAGES (MULTIPLE FILES • PDF, JPEG, PNG)</label><input type="file" name="product_visual[]" multiple accept=".png,.jpg,.jpeg,.webp,.pdf" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-slate-400 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:bg-slate-800 file:text-amber-500"><div class="text-[11px] text-slate-500 mt-2">Maximum 10 MB per upload area.</div></div>
 
-<div><label class="label">ORDER VOLUME & SPECIFICATIONS / COMMERCIAL BRIEF</label><textarea required name="message" rows="5" placeholder="Detail your quantity, target delivery timeline, specific ICD/port requirements, target price, Incoterm, payment preference, certifications or other requirements..." class="field"></textarea></div>
+<div><label class="label">ADDITIONAL INFORMATION / GENERAL INQUIRY <span class="text-slate-500 font-normal">(OPTIONAL)</span></label><textarea name="message" rows="5" placeholder="Add any other information, questions, commercial requirements, delivery preferences or special instructions you would like us to know..." class="field"></textarea></div>
 
 <button type="submit" class="w-full bg-brand-amber hover:bg-brand-gold text-brand-dark font-bold py-4 px-6 rounded-xl transition shadow-lg shadow-amber-500/20">Submit Commercial Inquiry →</button>
-<p class="text-center text-[11px] text-slate-500 leading-relaxed">Please provide clear product specifications, quantities and destination details so the sourcing brief can be reviewed accurately.</p>
+<p class="text-center text-[11px] text-slate-500 leading-relaxed">Please provide clear product specifications, quantities, destination details and preferred commercial terms where known. Final trade and payment terms remain subject to quotation, negotiation and transaction review.</p>
 </form>
 </div></div></section>
 </main>
@@ -504,42 +528,184 @@ const term=document.getElementById('productSearch').value.toLowerCase().trim();l
 active.querySelectorAll('.product').forEach(c=>{const show=!term||(c.dataset.search+' '+c.innerText).toLowerCase().includes(term);c.style.display=show?'':'none';if(show)count++});
 document.getElementById('noResults').classList.toggle('hidden',count!==0)
 }
-const routeText={
-me:'GCC destination: verify importer registration, labelling, customs classification and product-specific approvals.',
-ksa:'Saudi Arabia: verify importer requirements, product standards, labelling and destination customs rules.',
-oman:'Oman: verify importer, product documentation and customs requirements.',
-qatar:'Qatar / Kuwait / Bahrain: verify importer, labelling, customs and product-specific requirements.',
-eu:'EU: verify product standards, labelling, packaging, sustainability and importer obligations.',
-uk:'UK: verify product standards, labelling, packaging, sustainability and importer obligations.',
-'af-east':'East Africa: verify country-specific customs, inspection, product standards and documentation.',
-'af-south':'Southern Africa: verify country-specific customs, inspection, product standards and documentation.',
-'af-west':'West / North Africa: verify country-specific customs, inspection, product standards and documentation.',
-asia:'Asia: verify the destination country’s import, labelling, customs and product-specific requirements.'
-};
+
 const sourceMap={india:'India Procurement Hub — Nationwide',bd:'Bangladesh Procurement Hub — Dhaka / Across Bengal',nepal:'Nepal Procurement Hub — Nationwide',dual:'Multi-Hub — compare India / Bangladesh / Nepal supplier options'};
 const commodityMap={spices:'india',coir:'india',textiles:'india',garments:'bd',jute:'bd',bags:'india / bd',steel:'india / bd',food:'india / bd',medical:'india — Future Specialist'};
-function calculateRoute(){
-const origin=document.getElementById('calc-origin').value,commodity=document.getElementById('calc-commodity').value,dest=document.getElementById('calc-destination').value,port=document.getElementById('calc-port');
-let source=sourceMap[origin];
-if(origin==='dual')source='Multi-Hub — compare India / Bangladesh / Nepal supplier options';
-else if(commodityMap[commodity]&&commodityMap[commodity]!==origin){
-const suggested=commodityMap[commodity];
-const suggestedLabel=suggested==='india'?'India':suggested==='bd'?'Bangladesh':suggested==='nepal'?'Nepal':suggested;
-source=suggestedLabel+' sourcing may be more suitable — confirm supplier availability';
+
+// Indicative planning ranges only. These are deliberately broad and are not live freight quotations.
+const transitRanges={
+india:{me:'7–14 days',ksa:'10–18 days',oman:'8–16 days',qatar:'9–17 days',asia:'5–14 days',eu:'18–28 days',uk:'20–30 days','af-east':'18–28 days','af-south':'22–32 days','af-west':'25–38 days'},
+bd:{me:'12–20 days',ksa:'14–22 days',oman:'13–21 days',qatar:'13–21 days',asia:'4–12 days',eu:'22–32 days',uk:'24–35 days','af-east':'18–28 days','af-south':'25–35 days','af-west':'28–40 days'},
+nepal:{me:'18–30 days',ksa:'20–32 days',oman:'20–32 days',qatar:'20–32 days',asia:'7–18 days',eu:'28–42 days',uk:'30–45 days','af-east':'30–45 days','af-south':'34–48 days','af-west':'38–52 days'},
+dual:{me:'7–20 days',ksa:'10–22 days',oman:'8–22 days',qatar:'9–22 days',asia:'4–18 days',eu:'18–35 days',uk:'20–38 days','af-east':'18–32 days','af-south':'22–38 days','af-west':'25–42 days'}
+};
+
+const portDestination={
+'jebel-ali':'me','khalifa':'me','sohar':'oman','dammam':'ksa','jeddah':'ksa','hamad':'qatar',
+'chittagong':'asia','birgunj':'asia','busan':'asia','nhava-sheva':'asia',
+'rotterdam':'eu','hamburg':'eu','felixstowe':'uk','mombasa':'af-east','dar':'af-east','durban':'af-south','other':'asia'
+};
+
+const buyerDocumentBase=[
+  'Buyer / company profile and registration details (company name, registered address and business contact details).',
+  'Clear product specification or technical datasheet, including grade, material, size, quality standard, packaging and branding / OEM requirements where applicable.',
+  'Required quantity / order volume and preferred shipment frequency or programme, if recurring.',
+  'Final destination country and desired discharge port / delivery hub.',
+  'Required delivery timeline or target arrival date.',
+  'Preferred commercial terms, including Incoterm and payment preference, if already established.',
+  'Any buyer-side certifications, standards, labelling, packaging, import-licence or registration requirements that must be met.',
+  'Reference images, drawings, samples, previous purchase specifications or other supporting documents, where applicable.'
+];
+
+function getBuyerDocumentChecklist(commodity){
+  const docs=[...buyerDocumentBase];
+  if(['food','spices'].includes(commodity)) docs.push('Any buyer-side food / agricultural import permits, product registrations or certificate requirements already specified by the destination authority.');
+  if(commodity==='medical') docs.push('Any buyer-side medical-device registration, licence, product approval, manufacturer authorisation or other regulatory documents required for the intended market.');
+  return '<ul class="list-disc pl-5 space-y-2">'+docs.map(d=>'<li>'+d+'</li>').join('')+'</ul>';
 }
-document.getElementById('out-source').textContent=source;
-document.getElementById('out-port').textContent=port.options[port.selectedIndex].text;
-document.getElementById('out-transit').textContent='Indicative — obtain current freight schedule';
-let compliance=routeText[dest]||routeText.asia;
-if(commodity==='medical')compliance+=' Medical products require specialist regulatory review before any transaction.';
-else if(commodity==='food'||commodity==='spices')compliance+=' Food/agricultural requirements should be verified by HS code and destination.';
-else compliance+=' Product classification, supplier documentation, export documents and destination customs requirements should be verified.';
-document.getElementById('out-compliance').textContent=compliance;
-document.getElementById('out-note').textContent='Route output is a planning aid only; actual transit time, freight cost, Incoterm, customs treatment and documentation depend on the specific shipment.'
+
+function calculateRoute(showResult=false){
+  const originEl=document.getElementById('calc-origin');
+  const commodityEl=document.getElementById('calc-commodity');
+  const destEl=document.getElementById('calc-destination');
+  const portEl=document.getElementById('calc-port');
+  if(!originEl||!commodityEl||!destEl||!portEl)return false;
+  const origin=originEl.value, commodity=commodityEl.value, dest=destEl.value, port=portEl.value;
+  if(!origin||!commodity||!dest||!port){
+    if(showResult) alert('Please select origin hub, commodity, target destination and desired discharge port.');
+    return false;
+  }
+  let source=sourceMap[origin];
+  if(origin==='dual') source='Multi-Hub — compare India / Bangladesh / Nepal supplier options';
+  else if(commodityMap[commodity]&&commodityMap[commodity]!==origin){
+    const suggested=commodityMap[commodity];
+    const suggestedLabel=suggested==='india'?'India':suggested==='bd'?'Bangladesh':suggested==='nepal'?'Nepal':suggested;
+    source=suggestedLabel+' sourcing may be more suitable — confirm supplier availability';
+  }
+  const routeDest=portDestination[port]||dest;
+  const transit=(transitRanges[origin]&&transitRanges[origin][routeDest])||'Indicative range to be confirmed';
+  if(!showResult)return true;
+  document.getElementById('out-source').textContent=source;
+  document.getElementById('out-transit').textContent=transit;
+  document.getElementById('out-port').textContent=portEl.options[portEl.selectedIndex].text;
+  document.getElementById('out-documents').innerHTML=getBuyerDocumentChecklist(commodity);
+  document.getElementById('out-note').textContent='This summary covers the route and indicative planning only. In the Commercial Inquiry, the buyer can provide the remaining information we need — including exact quantity, product specifications, packaging requirements, previous purchase specifications, drawings, samples, reference images and any other supporting documents. HS code, product classification and transaction-specific compliance checks will be handled by ADHIL INTERNATIONAL.';
+  document.getElementById('route-placeholder').classList.add('hidden');
+  document.getElementById('route-results').classList.remove('hidden');
+  document.getElementById('route-output').classList.remove('opacity-75');
+  return true;
 }
+
+function setSelectByText(select, text){
+  if(!select||!text)return false;
+  const normalize=value=>String(value||'').replace(/\s+/g,' ').trim().toLowerCase();
+  const wanted=normalize(text);
+  let option=Array.from(select.options).find(o=>normalize(o.text)===wanted);
+  if(!option) option=Array.from(select.options).find(o=>normalize(o.text).includes(wanted)||wanted.includes(normalize(o.text)));
+  if(!option)return false;
+  select.value=option.value;
+  option.selected=true;
+  select.dispatchEvent(new Event('input',{bubbles:true}));
+  select.dispatchEvent(new Event('change',{bubbles:true}));
+  return true;
+}
+
+function useRouteInCommercialInquiry(){
+  if(!calculateRoute(true))return;
+
+  const originEl=document.getElementById('calc-origin');
+  const commodityEl=document.getElementById('calc-commodity');
+  const destEl=document.getElementById('calc-destination');
+  const portEl=document.getElementById('calc-port');
+  const originLabel=originEl.options[originEl.selectedIndex].text.trim();
+  const commodity=commodityEl.value;
+  const dest=destEl.value;
+  const port=portEl.value;
+  const commodityLabel=commodityEl.options[commodityEl.selectedIndex].text.trim();
+  const destLabel=destEl.options[destEl.selectedIndex].text.trim();
+  const portLabel=portEl.options[portEl.selectedIndex].text.trim();
+  const transit=document.getElementById('out-transit').textContent.trim();
+
+  const commodityMapForInquiry={
+    spices:'Agro Commodities — Nuts & Spices',
+    coir:'Coir & Coconut Products',
+    textiles:'Cotton Yarn / Textiles',
+    garments:'RMG Apparel & Textiles',
+    jute:'Jute & Sustainable Products',
+    bags:'Bags & Accessories',
+    steel:'Structural & Commercial Steel',
+    food:'Indian Agro & Processed Goods',
+    medical:'Medical Devices & Consumables — Future Specialist'
+  };
+  const destinationMapForInquiry={
+    me:'UAE', ksa:'Saudi Arabia', oman:'Oman', qatar:'Qatar / Kuwait / Bahrain',
+    asia:'Southeast Asia', eu:'EU Central / West', uk:'United Kingdom',
+    'af-east':'East Coast — Kenya / Tanzania', 'af-south':'Southern Region', 'af-west':'West / North Coast'
+  };
+  const portMapForInquiry={
+    'jebel-ali':'Jebel Ali Port (Dubai, UAE)',
+    khalifa:'Khalifa Port (Abu Dhabi, UAE)',
+    sohar:'Sohar Port / Oman',
+    dammam:'King Abdul Aziz Port / Dammam (KSA)',
+    jeddah:'Jeddah Islamic Port (KSA)',
+    hamad:'Hamad Port (Qatar) / Shuwaikh (Kuwait)',
+    chittagong:'Chittagong / Mongla (Bangladesh)',
+    birgunj:'ICD Birgunj via Kolkata/Haldia (Nepal Transit)',
+    busan:'Busan / Incheon (South Korea)',
+    'nhava-sheva':'Nhava Sheva (JNPT) / Chennai (India)',
+    rotterdam:'Rotterdam / Antwerp (EU Hub)',
+    hamburg:'Hamburg (Germany)', felixstowe:'Felixstowe (UK)',
+    mombasa:'Mombasa (Kenya / East Africa)', dar:'Dar es Salaam (Tanzania)',
+    durban:'Durban (South Africa)', other:'Other Port / Inland Dry Port'
+  };
+
+  const inquiryCommodity=commodityMapForInquiry[commodity]||commodityLabel;
+  const inquiryDestination=destinationMapForInquiry[dest]||destLabel;
+  const inquiryPort=portMapForInquiry[port]||portLabel;
+
+  const inquiryForm=document.getElementById('commercial-inquiry-form') || document.querySelector('#contact form');
+  if(!inquiryForm){
+    alert('Commercial inquiry form could not be found.');
+    return;
+  }
+
+  const commoditySet=setSelectByText(inquiryForm.querySelector('select[name="commodity"]'),inquiryCommodity);
+  const destinationSet=setSelectByText(inquiryForm.querySelector('select[name="destination"]'),inquiryDestination);
+  const portSet=setSelectByText(inquiryForm.querySelector('select[name="port"]'),inquiryPort);
+
+  const hiddenOrigin=document.getElementById('route-origin-hidden');
+  if(hiddenOrigin)hiddenOrigin.value=originLabel;
+
+  // Keep the optional free-text field genuinely optional: route data is carried by the
+  // structured form fields above rather than being injected into the buyer's message.
+  const brief=inquiryForm.querySelector('textarea[name="message"]');
+  if(brief){
+    brief.value='';
+    brief.dispatchEvent(new Event('input',{bubbles:true}));
+  }
+
+  const contact=document.getElementById('contact');
+  if(contact){
+    contact.scrollIntoView({behavior:'smooth',block:'start'});
+    window.setTimeout(()=>{
+      const firstField=contact.querySelector('input:not([type="hidden"]):not([type="file"]), select, textarea');
+      if(firstField)firstField.focus({preventScroll:true});
+    },650);
+  }
+
+  if(!commoditySet||!destinationSet||!portSet){
+    console.warn('Route handoff completed with a select-match warning.',{commoditySet,destinationSet,portSet,inquiryCommodity,inquiryDestination,inquiryPort});
+  }
+}
+
+function launchRouteEvaluator(){
+  if(!calculateRoute(true))return;
+  document.getElementById('route-output').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
 document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('mobileMenu').classList.toggle('open'));
 document.querySelectorAll('#mobileMenu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('mobileMenu').classList.remove('open')));
-calculateRoute();filterProducts();
+filterProducts();
 
 const MAX_UPLOAD_BYTES = 10 * 1024 * 1024;
 function enforceUploadLimit(input, label) {
