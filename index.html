@@ -1,147 +1,136 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#080d1a">
-  <meta name="description" content="ADHIL INTERNATIONAL — Cross-border sourcing, procurement coordination and global B2B trade development across India, Bangladesh, Nepal and selected international markets.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#070b14">
+  <meta name="description" content="ADHIL INTERNATIONAL — Global sourcing, procurement and B2B trade connections.">
   <title>ADHIL INTERNATIONAL | Global Sourcing & Trade</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root{
       --bg:#070b14;
-      --bg2:#0a1020;
+      --bg-soft:#0b1220;
       --panel:#101827;
-      --panel2:#0c1424;
-      --line:rgba(148,163,184,.20);
-      --line-strong:rgba(148,163,184,.30);
-      --text:#f8fafc;
-      --muted:#94a3b8;
-      --muted2:#64748b;
-      --gold:#f59e0b;
-      --gold2:#fbbf24;
-      --blue:#60a5fa;
-      --green:#34d399;
-      --radius:24px;
+      --panel-2:#0b1322;
+      --border:#263247;
+      --text:#f7f8fb;
+      --muted:#9aa7bb;
+      --muted-2:#718096;
+      --gold:#f6a20a;
+      --gold-light:#ffc33d;
       --max:1180px;
     }
 
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:88px}
+
+    html{
+      scroll-behavior:smooth;
+      background:var(--bg);
+    }
+
     body{
       margin:0;
-      min-height:100vh;
-      overflow-x:hidden;
+      min-width:320px;
       color:var(--text);
       background:
-        radial-gradient(circle at 8% 10%,rgba(245,158,11,.10),transparent 25rem),
-        radial-gradient(circle at 92% 30%,rgba(37,99,235,.09),transparent 27rem),
-        radial-gradient(circle at 60% 90%,rgba(16,185,129,.055),transparent 28rem),
-        var(--bg);
-      font-family:"Plus Jakarta Sans",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+        radial-gradient(circle at 8% 10%, rgba(246,162,10,.09), transparent 28%),
+        radial-gradient(circle at 92% 28%, rgba(45,95,180,.12), transparent 30%),
+        linear-gradient(180deg,#080c15 0%,#070d18 48%,#050b14 100%);
+      font-family:Arial, Helvetica, sans-serif;
+      overflow-x:hidden;
     }
 
     body::before{
       content:"";
       position:fixed;
-      inset:-20%;
-      z-index:-2;
-      pointer-events:none;
-      opacity:.42;
-      background-image:
-        linear-gradient(rgba(148,163,184,.035) 1px,transparent 1px),
-        linear-gradient(90deg,rgba(148,163,184,.035) 1px,transparent 1px);
-      background-size:64px 64px;
-      transform:rotate(-5deg);
-    }
-
-    body::after{
-      content:"";
-      position:fixed;
       inset:0;
-      z-index:-1;
       pointer-events:none;
-      background:linear-gradient(180deg,rgba(7,11,20,.04),rgba(7,11,20,.72));
+      z-index:-1;
+      opacity:.22;
+      background-image:
+        linear-gradient(rgba(148,163,184,.055) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(148,163,184,.055) 1px,transparent 1px);
+      background-size:72px 72px;
+      transform:skewY(-2deg);
+      transform-origin:top left;
     }
 
     a{color:inherit;text-decoration:none}
     button,input,textarea,select{font:inherit}
     button{cursor:pointer}
-    img{max-width:100%;display:block}
 
     .container{
-      width:min(calc(100% - 32px),var(--max));
-      margin-inline:auto;
+      width:calc(100% - 32px);
+      max-width:var(--max);
+      margin:0 auto;
     }
 
-    /* ---------- HEADER ---------- */
-
-    .header{
+    /* HEADER */
+    .site-header{
       position:sticky;
       top:0;
       z-index:1000;
-      background:rgba(7,11,20,.88);
+      background:rgba(7,11,20,.96);
       border-bottom:1px solid rgba(148,163,184,.12);
-      backdrop-filter:blur(18px);
-      -webkit-backdrop-filter:blur(18px);
     }
 
     .nav{
-      min-height:86px;
+      min-height:88px;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:24px;
+      gap:20px;
     }
 
     .brand{
       display:flex;
       align-items:center;
-      gap:16px;
+      gap:15px;
       min-width:0;
     }
 
     .brand-mark{
-      width:54px;
-      height:54px;
-      flex:0 0 54px;
-      border:1px solid rgba(245,158,11,.55);
+      width:56px;
+      height:56px;
+      flex:0 0 56px;
+      border:1px solid rgba(246,162,10,.58);
       border-radius:50%;
       display:grid;
       place-items:center;
       background:#030507;
       color:var(--gold);
-      font-size:23px;
-      font-weight:800;
-      box-shadow:0 0 30px rgba(245,158,11,.07);
+      font-size:25px;
+      font-weight:900;
+      letter-spacing:-.04em;
     }
 
-    .brand-name{
+    .brand-text{min-width:0}
+
+    .brand-main{
+      color:var(--gold);
+      font-size:25px;
+      line-height:1;
+      font-weight:900;
+      letter-spacing:.035em;
+    }
+
+    .brand-sub{
+      margin-top:7px;
+      color:var(--gold-light);
+      font-size:11px;
       line-height:1;
       font-weight:800;
-      letter-spacing:.04em;
-      font-size:24px;
-      color:var(--gold);
-    }
-
-    .brand-name span{
-      display:block;
-      margin-top:7px;
-      font-size:12px;
-      letter-spacing:.43em;
-      color:var(--gold2);
+      letter-spacing:.40em;
     }
 
     .brand-tag{
-      margin-top:7px;
-      color:#cbd5e1;
+      margin-top:8px;
+      color:#c3ccda;
       font-size:10px;
+      line-height:1;
       font-weight:700;
-      letter-spacing:.02em;
+      letter-spacing:.01em;
     }
 
     .nav-links{
@@ -151,108 +140,96 @@
     }
 
     .nav-links a{
-      position:relative;
       color:#cbd5e1;
       font-size:13px;
       font-weight:700;
     }
 
-    .nav-links a::after{
-      content:"";
-      position:absolute;
-      left:0;
-      right:100%;
-      bottom:-8px;
-      height:2px;
-      background:var(--gold);
-      transition:right .25s ease;
-    }
+    .nav-links a:hover{color:var(--gold-light)}
 
-    .nav-links a:hover::after{right:0}
-
-    .menu-btn{
+    .menu-button{
+      display:none;
       width:54px;
       height:54px;
+      flex:0 0 54px;
+      border:1px solid #2a374c;
       border-radius:17px;
-      border:1px solid rgba(148,163,184,.23);
-      background:#111a2c;
-      color:#e2e8f0;
-      display:none;
-      place-items:center;
+      background:#111a2b;
+      color:#e5e7eb;
+      align-items:center;
+      justify-content:center;
     }
 
-    .menu-btn span,
-    .menu-btn span::before,
-    .menu-btn span::after{
-      content:"";
-      display:block;
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after{
       width:25px;
       height:2px;
-      background:#e2e8f0;
-      border-radius:2px;
-      transition:.25s ease;
+      border-radius:4px;
+      background:#dce3ed;
+      display:block;
+      content:"";
+      position:relative;
     }
 
-    .menu-btn span::before{transform:translateY(-8px)}
-    .menu-btn span::after{transform:translateY(6px)}
+    .hamburger::before{position:absolute;top:-8px}
+    .hamburger::after{position:absolute;top:8px}
 
-    .mobile-nav{
+    .mobile-menu{
       display:none;
-      padding:0 0 18px;
+      padding:0 0 16px;
     }
 
-    .mobile-nav.open{display:grid;gap:8px}
+    .mobile-menu.open{
+      display:grid;
+      gap:8px;
+    }
 
-    .mobile-nav a{
+    .mobile-menu a{
       padding:13px 14px;
-      border:1px solid rgba(148,163,184,.12);
+      border:1px solid rgba(148,163,184,.13);
       border-radius:12px;
-      background:rgba(15,23,42,.65);
-      color:#cbd5e1;
+      background:#0d1626;
+      color:#d6deea;
       font-size:14px;
       font-weight:700;
     }
 
-    /* ---------- HERO ---------- */
-
+    /* HERO */
     .hero{
-      padding:82px 0 30px;
+      padding:68px 0 24px;
     }
 
     .eyebrow{
-      width:max-content;
-      max-width:100%;
-      display:flex;
+      display:inline-flex;
       align-items:center;
       gap:11px;
+      max-width:100%;
       padding:12px 18px;
-      border:1px solid rgba(148,163,184,.18);
+      border:1px solid #2b3a50;
       border-radius:999px;
-      background:linear-gradient(135deg,rgba(30,41,59,.80),rgba(15,23,42,.65));
-      color:#cbd5e1;
+      background:linear-gradient(135deg,#182536,#152131);
+      color:#d2d9e4;
       font-size:13px;
-      line-height:1;
+      line-height:1.2;
       font-weight:800;
-      letter-spacing:.02em;
-      box-shadow:0 12px 35px rgba(0,0,0,.14);
     }
 
     .eyebrow-dot{
       width:12px;
       height:12px;
+      flex:0 0 12px;
       border-radius:50%;
       background:var(--gold);
-      box-shadow:0 0 16px rgba(245,158,11,.42);
-      flex:0 0 12px;
     }
 
     h1{
       max-width:850px;
-      margin:45px 0 0;
-      font-size:clamp(43px,7vw,78px);
-      line-height:.99;
+      margin:46px 0 0;
+      font-size:clamp(44px,7vw,78px);
+      line-height:1.01;
       letter-spacing:-.055em;
-      font-weight:800;
+      font-weight:900;
     }
 
     h1 .gold{
@@ -261,466 +238,389 @@
     }
 
     .hero-copy{
-      max-width:790px;
-      margin:54px 0 0;
-      color:#94a3b8;
+      max-width:800px;
+      margin:48px 0 0;
+      color:#9ca9bc;
       font-size:20px;
-      line-height:1.85;
+      line-height:1.8;
       font-weight:500;
     }
 
-    .hero-copy strong{color:#e2e8f0}
+    .hero-copy strong{color:#e7ebf2}
 
-    /* ---------- TRADE ROUTE ---------- */
-
+    /* ROUTE VISUAL */
     .route-card{
-      margin-top:52px;
+      margin-top:50px;
       padding:34px 26px 30px;
-      border:1px solid rgba(100,116,139,.25);
-      border-radius:26px;
+      border:1px solid #26344a;
+      border-radius:27px;
       background:
-        linear-gradient(145deg,rgba(16,24,39,.88),rgba(10,16,30,.72));
-      box-shadow:
-        0 25px 80px rgba(0,0,0,.22),
-        inset 0 1px rgba(255,255,255,.025);
-      overflow:hidden;
+        linear-gradient(145deg,rgba(18,28,45,.96),rgba(9,16,29,.96));
+      box-shadow:0 24px 70px rgba(0,0,0,.24);
     }
 
-    .route-heading{
-      margin:0 0 28px;
+    .route-title{
+      margin:0 0 30px;
       text-align:center;
-      color:#94a3b8;
+      color:#9eabbd;
       font-size:13px;
       line-height:1.5;
-      font-weight:800;
+      font-weight:900;
       letter-spacing:.18em;
       text-transform:uppercase;
     }
 
-    .route-layout{
-      display:grid;
-      grid-template-columns:minmax(0,1fr) minmax(180px,1.05fr) minmax(0,1.5fr);
-      align-items:center;
-      gap:18px;
-    }
-
-    .hub-group{
+    .source-row,
+    .market-row{
       display:flex;
-      flex-wrap:wrap;
       justify-content:center;
+      flex-wrap:wrap;
       gap:10px;
     }
 
-    .hub{
-      min-width:105px;
-      padding:15px 12px 13px;
+    .location-card{
+      min-width:106px;
+      padding:14px 12px 12px;
+      border:1px solid #26344a;
+      border-radius:16px;
+      background:#050b17;
       text-align:center;
-      border:1px solid rgba(148,163,184,.18);
-      border-radius:15px;
-      background:rgba(2,6,23,.72);
-      box-shadow:0 10px 26px rgba(0,0,0,.16);
+      box-shadow:0 10px 25px rgba(0,0,0,.16);
     }
 
-    .hub-title{
-      color:#e2e8f0;
+    .location-name{
+      color:#e3e8f0;
       font-size:13px;
       line-height:1.25;
       font-weight:800;
+      white-space:nowrap;
     }
 
-    .hub-sub{
+    .location-role{
       margin-top:7px;
-      color:#64748b;
+      color:#7f8ca0;
       font-size:10px;
+      line-height:1.2;
       font-weight:700;
     }
 
-    .hub.destination{
-      min-width:100px;
-    }
-
-    .hub.destination .hub-title{
-      font-size:12px;
-    }
-
-    .route-center{
-      min-width:0;
+    .transport{
+      position:relative;
+      margin:27px 0 29px;
+      height:78px;
       display:flex;
       align-items:center;
-      padding:28px 0 16px;
     }
 
-    .route-track{
-      position:relative;
-      width:100%;
+    .transport-line{
+      position:absolute;
+      left:0;
+      right:0;
+      top:50%;
       height:4px;
+      transform:translateY(-50%);
       border-radius:999px;
-      background:linear-gradient(90deg,#64748b,#e2e8f0,#64748b);
-      box-shadow:0 0 18px rgba(226,232,240,.08);
+      background:linear-gradient(90deg,#7a8799,#dce2e9,#7a8799);
+      box-shadow:0 0 18px rgba(220,226,233,.10);
     }
 
-    .route-track::before{
+    .transport-line::after{
       content:"";
       position:absolute;
       inset:0;
-      border-radius:inherit;
-      background:linear-gradient(90deg,transparent,rgba(245,158,11,.75),transparent);
-      transform:translateX(-100%);
-      animation:trackGlow 3s linear infinite;
+      border-radius:999px;
+      background:linear-gradient(90deg,transparent,#f6a20a,transparent);
+      opacity:.65;
+      animation:line-shimmer 3s linear infinite;
     }
 
     .vehicle{
       position:absolute;
       top:50%;
       left:0;
-      z-index:5;
-      line-height:1;
+      z-index:3;
+      display:block;
       opacity:0;
-      will-change:left,transform,opacity;
-      filter:drop-shadow(0 6px 7px rgba(0,0,0,.55));
+      line-height:1;
       pointer-events:none;
-      user-select:none;
+      filter:drop-shadow(0 5px 6px rgba(0,0,0,.55));
+      will-change:transform,opacity;
     }
 
-    /* One complete vehicle journey at a time:
-       ship first, then plane, then ship again. */
+    /*
+      EXACT SEQUENCE:
+      1. One ship travels from the beginning to the end.
+      2. It disappears.
+      3. One plane travels from the beginning to the end.
+      4. It disappears.
+      5. Repeat.
+    */
     .vehicle.ship{
-      font-size:34px;
-      animation:shipMove 12s linear infinite;
+      font-size:38px;
+      animation:ship-cycle 14s linear infinite;
     }
 
     .vehicle.plane{
-      font-size:30px;
-      animation:planeMove 12s linear infinite;
+      font-size:34px;
+      animation:plane-cycle 14s linear infinite;
     }
 
-    @keyframes trackGlow{
-      to{transform:translateX(100%)}
+    @keyframes ship-cycle{
+      0%{left:0;opacity:0;transform:translate(-120%,-50%)}
+      4%{opacity:1}
+      46%{left:100%;opacity:1;transform:translate(-8%,-50%)}
+      49%{left:100%;opacity:0;transform:translate(25%,-50%)}
+      100%{left:100%;opacity:0;transform:translate(25%,-50%)}
     }
 
-    @keyframes shipMove{
-      0%{
-        left:0;
-        opacity:0;
-        transform:translate(-125%,-54%);
-      }
-      4%{
-        opacity:1;
-      }
-      45%{
-        left:100%;
-        opacity:1;
-        transform:translate(-18%,-54%);
-      }
-      49%{
-        left:100%;
-        opacity:0;
-        transform:translate(30%,-54%);
-      }
-      100%{
-        left:100%;
-        opacity:0;
-        transform:translate(30%,-54%);
-      }
+    @keyframes plane-cycle{
+      0%,50%{left:0;opacity:0;transform:translate(-120%,-50%)}
+      54%{opacity:1}
+      96%{left:100%;opacity:1;transform:translate(-8%,-50%)}
+      99%{left:100%;opacity:0;transform:translate(25%,-50%)}
+      100%{left:100%;opacity:0;transform:translate(25%,-50%)}
     }
 
-    @keyframes planeMove{
-      0%,50%{
-        left:0;
-        opacity:0;
-        transform:translate(-125%,-54%);
-      }
-      54%{
-        opacity:1;
-      }
-      95%{
-        left:100%;
-        opacity:1;
-        transform:translate(-18%,-54%);
-      }
-      99%{
-        left:100%;
-        opacity:0;
-        transform:translate(30%,-54%);
-      }
-      100%{
-        left:100%;
-        opacity:0;
-      }
+    @keyframes line-shimmer{
+      0%{transform:translateX(-100%)}
+      100%{transform:translateX(100%)}
     }
 
-    .route-caption{
-      margin-top:26px;
+    .market-row .location-card{
+      min-width:calc(25% - 8px);
+    }
+
+    .route-note{
+      margin-top:20px;
       text-align:center;
-      color:#64748b;
+      color:#66758b;
       font-size:10px;
-      font-weight:700;
+      font-weight:800;
       letter-spacing:.12em;
+      text-transform:uppercase;
     }
 
-    /* ---------- CTA ---------- */
-
-    .cta{
-      margin-top:34px;
+    .cta-wrap{
+      margin-top:26px;
       display:flex;
       justify-content:center;
     }
 
-    .cta-btn{
+    .cta{
+      display:block;
       width:100%;
       max-width:640px;
-      border:0;
+      padding:21px 24px;
       border-radius:18px;
-      padding:21px 26px;
       background:var(--gold);
-      color:#090d16;
-      font-size:20px;
-      font-weight:800;
-      box-shadow:
-        0 16px 38px rgba(245,158,11,.18),
-        inset 0 1px rgba(255,255,255,.30);
-      transition:transform .2s ease,box-shadow .2s ease;
+      color:#090d14;
+      text-align:center;
+      font-size:19px;
+      font-weight:900;
+      box-shadow:0 15px 38px rgba(246,162,10,.18);
     }
 
-    .cta-btn:hover{
-      transform:translateY(-3px);
-      box-shadow:
-        0 22px 46px rgba(245,158,11,.25),
-        inset 0 1px rgba(255,255,255,.35);
-    }
+    .cta:hover{background:var(--gold-light)}
 
-    /* ---------- SECTIONS ---------- */
-
-    section{
-      padding:90px 0;
+    /* GENERAL SECTIONS */
+    section:not(.hero){
+      padding:82px 0;
     }
 
     .section-label{
       color:var(--gold);
       font-size:11px;
-      font-weight:800;
+      line-height:1;
+      font-weight:900;
       letter-spacing:.22em;
       text-transform:uppercase;
     }
 
     .section-title{
-      margin:12px 0 0;
-      font-size:clamp(30px,5vw,48px);
-      line-height:1.1;
-      letter-spacing:-.04em;
+      margin:14px 0 0;
+      font-size:clamp(32px,5vw,50px);
+      line-height:1.08;
+      letter-spacing:-.045em;
     }
 
     .section-copy{
-      max-width:720px;
+      max-width:760px;
       margin:18px 0 0;
       color:var(--muted);
-      line-height:1.8;
       font-size:16px;
+      line-height:1.8;
     }
 
-    /* ---------- SOURCING MATRIX ---------- */
-
-    .matrix{
+    .cards{
       margin-top:34px;
       display:grid;
       grid-template-columns:repeat(3,1fr);
       gap:16px;
     }
 
-    .matrix-card{
+    .card{
       padding:25px;
-      border:1px solid var(--line);
-      border-radius:20px;
-      background:linear-gradient(145deg,rgba(16,24,39,.84),rgba(9,14,27,.72));
-      transition:.3s ease;
+      border:1px solid #253248;
+      border-radius:21px;
+      background:linear-gradient(145deg,rgba(16,25,41,.94),rgba(9,15,27,.94));
     }
 
-    .matrix-card:hover{
-      transform:translateY(-5px);
-      border-color:rgba(245,158,11,.35);
-    }
-
-    .matrix-card h3{
+    .card h3{
       margin:0;
       font-size:20px;
     }
 
-    .matrix-card p{
-      color:var(--muted);
-      line-height:1.7;
-      font-size:13px;
+    .card p{
       margin:12px 0 0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.75;
     }
 
     .badge{
-      display:inline-flex;
+      display:inline-block;
       margin-top:18px;
-      padding:6px 9px;
+      padding:7px 10px;
       border-radius:999px;
+      border:1px solid #34425a;
+      color:#b7c2d2;
+      background:#111c2e;
       font-size:9px;
-      font-weight:800;
+      font-weight:900;
       letter-spacing:.1em;
       text-transform:uppercase;
     }
 
-    .badge.gold{
-      color:#fbbf24;
-      border:1px solid rgba(245,158,11,.22);
-      background:rgba(245,158,11,.08);
-    }
-
-    .badge.green{
-      color:#6ee7b7;
-      border:1px solid rgba(16,185,129,.22);
-      background:rgba(16,185,129,.08);
-    }
-
-    .badge.blue{
-      color:#93c5fd;
-      border:1px solid rgba(59,130,246,.22);
-      background:rgba(59,130,246,.08);
-    }
-
-    /* ---------- EVALUATOR ---------- */
-
-    .evaluator{
-      margin-top:35px;
+    .evaluator-grid{
+      margin-top:34px;
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:18px;
+      gap:17px;
     }
 
     .panel{
-      padding:28px;
-      border:1px solid var(--line);
-      border-radius:22px;
-      background:linear-gradient(145deg,rgba(16,24,39,.84),rgba(9,14,27,.72));
+      padding:27px;
+      border:1px solid #253248;
+      border-radius:21px;
+      background:linear-gradient(145deg,rgba(16,25,41,.94),rgba(9,15,27,.94));
     }
 
-    .panel h3{
-      margin:0;
-      font-size:20px;
-    }
-
-    .panel p{
-      color:var(--muted);
-      line-height:1.7;
-      font-size:13px;
-    }
+    .panel h3{margin:0;font-size:20px}
+    .panel p{color:var(--muted);font-size:13px;line-height:1.75}
 
     .score{
-      margin-top:22px;
       display:flex;
       align-items:end;
       gap:10px;
+      margin-top:22px;
     }
 
     .score strong{
-      font-size:48px;
-      line-height:1;
       color:var(--gold);
+      font-size:50px;
+      line-height:1;
     }
 
     .score span{
-      color:var(--muted2);
+      color:#6f7e93;
       font-size:12px;
       padding-bottom:5px;
     }
 
-    .bar{
+    .progress{
       height:9px;
-      margin-top:20px;
+      margin-top:19px;
       border-radius:999px;
-      background:#172033;
       overflow:hidden;
+      background:#182235;
     }
 
-    .bar i{
+    .progress span{
       display:block;
-      height:100%;
       width:82%;
-      border-radius:inherit;
-      background:linear-gradient(90deg,#d97706,#fbbf24);
+      height:100%;
+      border-radius:999px;
+      background:linear-gradient(90deg,#d97706,#ffc33d);
     }
 
-    /* ---------- CONTACT ---------- */
-
+    /* CONTACT */
     .contact-grid{
-      margin-top:35px;
+      margin-top:34px;
       display:grid;
       grid-template-columns:.8fr 1.2fr;
-      gap:18px;
+      gap:17px;
     }
 
-    .contact-info,
-    .contact-form{
-      padding:28px;
-      border:1px solid var(--line);
-      border-radius:22px;
-      background:linear-gradient(145deg,rgba(16,24,39,.84),rgba(9,14,27,.72));
+    .contact-box{
+      padding:27px;
+      border:1px solid #253248;
+      border-radius:21px;
+      background:linear-gradient(145deg,rgba(16,25,41,.94),rgba(9,15,27,.94));
     }
 
-    .contact-info h3{
-      margin:0;
-      font-size:23px;
-    }
+    .contact-box h3{margin:0;font-size:22px}
 
-    .contact-info p{
+    .contact-box p{
       color:var(--muted);
-      line-height:1.75;
       font-size:14px;
+      line-height:1.75;
     }
 
     .contact-item{
-      margin-top:20px;
-      padding-top:18px;
+      padding-top:17px;
+      margin-top:17px;
       border-top:1px solid rgba(148,163,184,.10);
     }
 
     .contact-item small{
       display:block;
-      color:var(--muted2);
-      text-transform:uppercase;
-      letter-spacing:.12em;
-      font-size:9px;
-      font-weight:800;
       margin-bottom:6px;
+      color:#68778c;
+      font-size:9px;
+      font-weight:900;
+      letter-spacing:.12em;
+      text-transform:uppercase;
     }
 
-    .contact-item span,
-    .contact-item a{
-      color:#e2e8f0;
+    .contact-item span{
+      color:#dce3ec;
       font-size:13px;
       font-weight:700;
     }
 
+    form{margin:0}
+
     .form-grid{
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:15px;
+      gap:14px;
     }
 
-    .form-field.full{grid-column:1/-1}
+    .full{grid-column:1/-1}
 
     label{
       display:block;
-      margin-bottom:7px;
+      margin:0 0 7px;
       color:#cbd5e1;
       font-size:10px;
-      font-weight:800;
+      font-weight:900;
       letter-spacing:.08em;
       text-transform:uppercase;
     }
 
-    input,textarea,select{
+    input,select,textarea{
       width:100%;
-      border:1px solid #1e293b;
+      border:1px solid #27354a;
       border-radius:12px;
       padding:13px 14px;
       outline:none;
       color:#e2e8f0;
       background:#060b15;
-      transition:.2s ease;
+    }
+
+    input:focus,select:focus,textarea:focus{
+      border-color:#a86e0b;
+      box-shadow:0 0 0 3px rgba(246,162,10,.08);
     }
 
     textarea{
@@ -728,25 +628,19 @@
       resize:vertical;
     }
 
-    input:focus,textarea:focus,select:focus{
-      border-color:rgba(245,158,11,.65);
-      box-shadow:0 0 0 3px rgba(245,158,11,.08);
-    }
-
     .submit{
-      margin-top:17px;
+      margin-top:16px;
+      padding:14px 20px;
       border:0;
       border-radius:13px;
-      padding:14px 20px;
       background:var(--gold);
       color:#080d14;
-      font-weight:800;
+      font-weight:900;
     }
 
-    /* ---------- FOOTER ---------- */
-
+    /* FOOTER */
     footer{
-      padding:45px 0 28px;
+      padding:44px 0 28px;
       border-top:1px solid rgba(148,163,184,.10);
     }
 
@@ -755,14 +649,13 @@
       flex-direction:column;
       align-items:center;
       text-align:center;
-      gap:22px;
+      gap:20px;
     }
 
     .socials{
       display:flex;
-      align-items:center;
-      justify-content:center;
       gap:12px;
+      justify-content:center;
     }
 
     .social{
@@ -770,205 +663,160 @@
       height:44px;
       display:grid;
       place-items:center;
-      border:1px solid rgba(148,163,184,.18);
+      border:1px solid #2b394f;
       border-radius:13px;
-      color:#cbd5e1;
-      background:rgba(15,23,42,.72);
-      font-weight:800;
-      font-size:14px;
-      transition:.2s ease;
+      background:#0d1626;
+      color:#d4dce7;
+      font-size:15px;
+      font-weight:900;
     }
 
     .social:hover{
+      border-color:#a86e0b;
       color:var(--gold);
-      border-color:rgba(245,158,11,.38);
-      transform:translateY(-3px);
     }
 
     .copyright{
-      color:#64748b;
+      color:#65748a;
       font-size:11px;
       font-weight:600;
     }
 
-    .copyright strong{
-      color:#94a3b8;
-    }
+    .copyright strong{color:#95a3b7}
 
-    /* ---------- MOBILE ---------- */
-
+    /* TABLET */
     @media (max-width:900px){
       .nav-links{display:none}
-      .menu-btn{display:grid}
+      .menu-button{display:flex}
 
-      .route-layout{
-        grid-template-columns:1fr;
-        gap:22px;
-      }
-
-      .route-center{
-        order:2;
-        width:100%;
-        padding:22px 3% 18px;
-      }
-
-      .route-layout .destination-group{
-        order:3;
-      }
-
-      .matrix{grid-template-columns:1fr}
-      .evaluator{grid-template-columns:1fr}
+      .cards{grid-template-columns:1fr}
+      .evaluator-grid{grid-template-columns:1fr}
       .contact-grid{grid-template-columns:1fr}
     }
 
+    /* MOBILE */
     @media (max-width:640px){
-      .container{
-        width:min(calc(100% - 28px),var(--max));
-      }
+      .container{width:calc(100% - 28px)}
 
       .nav{min-height:82px}
       .brand{gap:11px}
       .brand-mark{
-        width:49px;
-        height:49px;
-        flex-basis:49px;
-        font-size:21px;
+        width:52px;
+        height:52px;
+        flex-basis:52px;
+        font-size:23px;
       }
 
-      .brand-name{font-size:21px}
-      .brand-name span{
-        font-size:10px;
-        letter-spacing:.35em;
+      .brand-main{font-size:23px}
+      .brand-sub{
+        margin-top:6px;
+        font-size:9px;
+        letter-spacing:.34em;
       }
 
       .brand-tag{
+        margin-top:6px;
         font-size:8px;
-        margin-top:5px;
       }
 
-      .hero{
-        padding:62px 0 18px;
-      }
+      .hero{padding:55px 0 20px}
 
       .eyebrow{
-        font-size:11px;
-        padding:11px 14px;
+        width:100%;
+        justify-content:center;
+        padding:11px 12px;
+        font-size:10px;
       }
 
       h1{
-        margin-top:40px;
-        font-size:clamp(42px,12vw,64px);
+        margin-top:39px;
+        font-size:clamp(40px,11.7vw,62px);
+        letter-spacing:-.055em;
       }
 
       .hero-copy{
-        margin-top:44px;
+        margin-top:38px;
         font-size:16px;
-        line-height:1.8;
+        line-height:1.75;
       }
 
       .route-card{
-        margin-top:38px;
-        padding:27px 14px 25px;
+        margin-top:34px;
+        padding:25px 13px 23px;
         border-radius:23px;
       }
 
-      .route-heading{
-        margin-bottom:23px;
-        font-size:11px;
-        letter-spacing:.15em;
+      .route-title{
+        margin-bottom:22px;
+        font-size:10px;
+        letter-spacing:.14em;
       }
 
-      .hub-group{
+      .location-card{
+        min-width:94px;
+        padding:12px 8px 11px;
+      }
+
+      .location-name{font-size:11px}
+      .location-role{font-size:9px}
+
+      .transport{
+        margin:24px 0 25px;
+        height:70px;
+      }
+
+      .vehicle.ship{font-size:34px}
+      .vehicle.plane{font-size:31px}
+
+      .market-row{
+        display:grid;
+        grid-template-columns:1fr 1fr;
         gap:8px;
       }
 
-      .hub{
-        min-width:96px;
-        padding:13px 9px 11px;
+      .market-row .location-card{
+        min-width:0;
+        width:100%;
       }
 
-      .hub-title{font-size:12px}
-      .hub-sub{font-size:9px}
+      .route-note{display:none}
 
-      .hub.destination{
-        min-width:calc(50% - 4px);
-      }
-
-      .route-center{
-        padding:31px 0 25px;
-      }
-
-      .route-track{
-        height:3px;
-      }
-
-      .vehicle.ship{font-size:32px}
-      .vehicle.plane{font-size:28px}
-
-      .route-caption{
-        display:none;
-      }
+      .cta-wrap{margin-top:22px}
 
       .cta{
-        margin-top:24px;
-      }
-
-      .cta-btn{
-        padding:19px 16px;
+        padding:19px 14px;
         font-size:17px;
       }
 
-      section{
-        padding:68px 0;
-      }
+      section:not(.hero){padding:64px 0}
 
-      .section-title{
-        font-size:34px;
-      }
+      .section-title{font-size:34px}
 
-      .form-grid{
-        grid-template-columns:1fr;
-      }
+      .form-grid{grid-template-columns:1fr}
+      .full{grid-column:auto}
 
-      .form-field.full{
-        grid-column:auto;
-      }
-
-      .contact-info,
-      .contact-form,
+      .contact-box,
       .panel,
-      .matrix-card{
-        padding:22px;
-      }
+      .card{padding:22px}
     }
 
-    /* Respect reduced-motion preferences */
     @media (prefers-reduced-motion:reduce){
-      *,
-      *::before,
-      *::after{
-        animation-duration:.01ms !important;
-        animation-iteration-count:1 !important;
-        scroll-behavior:auto !important;
-      }
+      html{scroll-behavior:auto}
+      .vehicle,.transport-line::after{animation:none !important}
     }
   </style>
 </head>
 
 <body>
 
-  <header class="header">
+  <header class="site-header">
     <div class="container">
-      <nav class="nav" aria-label="Primary navigation">
-
-        <a class="brand" href="#top" aria-label="ADHIL INTERNATIONAL home">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="ADHIL INTERNATIONAL">
           <div class="brand-mark">AI</div>
-
-          <div>
-            <div class="brand-name">
-              ADHIL
-              <span>INTERNATIONAL</span>
-            </div>
+          <div class="brand-text">
+            <div class="brand-main">ADHIL</div>
+            <div class="brand-sub">INTERNATIONAL</div>
             <div class="brand-tag">YOUR TRUSTED BRIDGE TO GLOBAL GOODS</div>
           </div>
         </a>
@@ -976,4 +824,279 @@
         <div class="nav-links">
           <a href="#sourcing">Sourcing</a>
           <a href="#markets">Markets</a>
-       
+          <a href="#evaluator">Evaluator</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <button class="menu-button" id="menuButton" type="button" aria-label="Open menu" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
+      </nav>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#sourcing">Sourcing</a>
+        <a href="#markets">Markets</a>
+        <a href="#evaluator">Evaluator</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+
+    <section class="hero">
+      <div class="container">
+
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          CROSS-BORDER SOURCING &amp; PROCUREMENT
+        </div>
+
+        <h1>
+          Securing Quality Trade.
+          <span class="gold">Delivering Global Supply.</span>
+        </h1>
+
+        <p class="hero-copy">
+          ADHIL INTERNATIONAL is building a practical B2B sourcing network across
+          <strong>India, Bangladesh</strong> and <strong>Nepal</strong>, with selected
+          global destination markets.
+        </p>
+
+        <div class="route-card" id="markets">
+
+          <div class="route-title">GLOBAL SOURCING → GLOBAL MARKET</div>
+
+          <div class="source-row">
+            <div class="location-card">
+              <div class="location-name">🇮🇳 India</div>
+              <div class="location-role">Source</div>
+            </div>
+            <div class="location-card">
+              <div class="location-name">🇧🇩 Bangladesh</div>
+              <div class="location-role">Source / Market</div>
+            </div>
+            <div class="location-card">
+              <div class="location-name">🇳🇵 Nepal</div>
+              <div class="location-role">Source / Market</div>
+            </div>
+          </div>
+
+          <div class="transport" aria-label="Animated cargo route">
+            <div class="transport-line"></div>
+            <span class="vehicle ship" aria-hidden="true">🚢</span>
+            <span class="vehicle plane" aria-hidden="true">✈️</span>
+          </div>
+
+          <div class="market-row">
+            <div class="location-card">
+              <div class="location-name">🌏 Asia</div>
+              <div class="location-role">Markets</div>
+            </div>
+            <div class="location-card">
+              <div class="location-name">🌍 Middle East</div>
+              <div class="location-role">Markets</div>
+            </div>
+            <div class="location-card">
+              <div class="location-name">🌍 Africa</div>
+              <div class="location-role">Markets</div>
+            </div>
+            <div class="location-card">
+              <div class="location-name">🇪🇺 Europe &amp; UK</div>
+              <div class="location-role">Markets</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="cta-wrap">
+          <a class="cta" href="#evaluator">Launch Trade Route Evaluator→</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="sourcing">
+      <div class="container">
+        <div class="section-label">Sourcing Network</div>
+        <h2 class="section-title">From reliable origins<br>to selected markets.</h2>
+        <p class="section-copy">
+          We connect practical sourcing opportunities with international business
+          demand, focusing on supplier discovery, procurement coordination and
+          dependable cross-border trade relationships.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <h3>🇮🇳 India</h3>
+            <p>A core sourcing base for identifying competitive products, manufacturers and supplier relationships.</p>
+            <span class="badge">Core Source</span>
+          </article>
+
+          <article class="card">
+            <h3>🇧🇩 Bangladesh</h3>
+            <p>A strategic sourcing and market connection within the regional trade network.</p>
+            <span class="badge">Source / Market</span>
+          </article>
+
+          <article class="card">
+            <h3>🇳🇵 Nepal</h3>
+            <p>A developing regional sourcing and market opportunity connected to the wider network.</p>
+            <span class="badge">Source / Market</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="evaluator">
+      <div class="container">
+        <div class="section-label">Trade Route Evaluator</div>
+        <h2 class="section-title">Evaluate a route<br>before you move.</h2>
+        <p class="section-copy">
+          A simple framework for assessing sourcing potential, destination demand,
+          route practicality and business readiness.
+        </p>
+
+        <div class="evaluator-grid">
+          <article class="panel">
+            <h3>Route Readiness</h3>
+            <p>Compare a potential sourcing origin and destination market before committing to a commercial route.</p>
+            <div class="score">
+              <strong>82</strong>
+              <span>/ 100 indicative readiness</span>
+            </div>
+            <div class="progress"><span></span></div>
+          </article>
+
+          <article class="panel">
+            <h3>What We Consider</h3>
+            <p>Supplier availability, product suitability, market opportunity, logistics practicality and the quality of the business connection.</p>
+            <span class="badge">Source</span>
+            <span class="badge">Demand</span>
+            <span class="badge">Route</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-label">Business Inquiry</div>
+        <h2 class="section-title">Let’s discuss your<br>next trade opportunity.</h2>
+
+        <div class="contact-grid">
+          <div class="contact-box">
+            <h3>ADHIL INTERNATIONAL</h3>
+            <p>
+              For sourcing requests, supplier discovery, procurement coordination
+              or international market opportunities, send us your requirements.
+            </p>
+
+            <div class="contact-item">
+              <small>Focus</small>
+              <span>Global Sourcing &amp; B2B Trade</span>
+            </div>
+
+            <div class="contact-item">
+              <small>Sourcing Network</small>
+              <span>India · Bangladesh · Nepal</span>
+            </div>
+
+            <div class="contact-item">
+              <small>Destination Markets</small>
+              <span>Asia · Middle East · Africa · Europe &amp; UK</span>
+            </div>
+          </div>
+
+          <!-- Replace YOUR_EMAIL@example.com with the email address that should receive inquiries. -->
+          <form
+            class="contact-box"
+            action="https://formsubmit.co/YOUR_EMAIL@example.com"
+            method="POST"
+          >
+            <input type="hidden" name="_subject" value="New ADHIL INTERNATIONAL Business Inquiry">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+
+            <div class="form-grid">
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required>
+              </div>
+
+              <div>
+                <label for="company">Company</label>
+                <input id="company" name="company" type="text" placeholder="Company name">
+              </div>
+
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@company.com" required>
+              </div>
+
+              <div>
+                <label for="market">Target Market</label>
+                <select id="market" name="target_market">
+                  <option value="">Select market</option>
+                  <option>Asia</option>
+                  <option>Middle East</option>
+                  <option>Africa</option>
+                  <option>Europe &amp; UK</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="full">
+                <label for="message">Requirement</label>
+                <textarea id="message" name="message" placeholder="Tell us what you want to source, where you want to sell, and any important requirements." required></textarea>
+              </div>
+            </div>
+
+            <button class="submit" type="submit">Send Business Inquiry →</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="socials">
+          <!-- Replace these # links with your real Facebook and Instagram URLs. -->
+          <a class="social" href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+          <a class="social" href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">◎</a>
+        </div>
+
+        <div class="copyright">
+          <strong>ADHIL INTERNATIONAL</strong> · © 2026 · All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      const button = document.getElementById("menuButton");
+      const menu = document.getElementById("mobileMenu");
+
+      if (!button || !menu) return;
+
+      button.addEventListener("click", function(){
+        const open = menu.classList.toggle("open");
+        button.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+
+      menu.querySelectorAll("a").forEach(function(link){
+        link.addEventListener("click", function(){
+          menu.classList.remove("open");
+          button.setAttribute("aria-expanded", "false");
+        });
+      });
+    })();
+  </script>
+
+</body>
+  </html>
+  
