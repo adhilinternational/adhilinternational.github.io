@@ -1,0 +1,2485 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ADHIL INTERNATIONAL Supplier Partnership — verified supplier empanelment for India, Bangladesh and Nepal.">
+<title>Supplier Partnership | ADHIL INTERNATIONAL</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script>
+tailwind.config={
+    theme:{
+        extend:{
+            fontFamily:{
+                sans:['Plus Jakarta Sans','sans-serif']
+            },
+            colors:{
+                brand:{
+                    dark:'#080d1a',
+                    navy:'#0f172a',
+                    slate:'#1e293b',
+                    amber:'#f59e0b',
+                    gold:'#d97706',
+                    accent:'#3b82f6'
+                }
+            }
+        }
+    }
+}
+</script>
+
+<style>
+html{
+    scroll-padding-top:90px
+}
+
+body{
+    overflow-x:hidden;
+    background:#080d1a
+}
+
+.site-bg{
+    position:fixed;
+    inset:0;
+    z-index:-20;
+    pointer-events:none;
+    background:
+        radial-gradient(circle at 10% 10%,rgba(245,158,11,.13),transparent 28%),
+        radial-gradient(circle at 88% 18%,rgba(59,130,246,.10),transparent 28%),
+        radial-gradient(circle at 55% 90%,rgba(16,185,129,.07),transparent 30%),
+        #080d1a
+}
+
+.site-bg:before{
+    content:"";
+    position:absolute;
+    inset:-25%;
+    background-image:
+        linear-gradient(rgba(148,163,184,.035) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(148,163,184,.035) 1px,transparent 1px);
+    background-size:60px 60px;
+    transform:rotate(-5deg);
+    animation:gridMove 24s linear infinite
+}
+
+.orb{
+    position:absolute;
+    border-radius:9999px;
+    filter:blur(80px);
+    opacity:.18;
+    animation:float 12s ease-in-out infinite
+}
+
+.orb.a{
+    width:380px;
+    height:380px;
+    background:#f59e0b;
+    left:-150px;
+    top:12%
+}
+
+.orb.b{
+    width:330px;
+    height:330px;
+    background:#2563eb;
+    right:-120px;
+    top:45%;
+    animation-delay:-4s
+}
+
+.orb.c{
+    width:280px;
+    height:280px;
+    background:#10b981;
+    left:42%;
+    bottom:-130px;
+    animation-delay:-8s
+}
+
+@keyframes gridMove{
+    from{
+        transform:translate(0,0) rotate(-5deg)
+    }
+    to{
+        transform:translate(60px,60px) rotate(-5deg)
+    }
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translate(0,0) scale(1)
+    }
+    50%{
+        transform:translate(25px,-30px) scale(1.08)
+    }
+}
+
+@keyframes pulse{
+    0%,100%{
+        opacity:.35;
+        transform:scale(.75)
+    }
+    50%{
+        opacity:1;
+        transform:scale(1.3)
+    }
+}
+
+@keyframes reveal{
+    from{
+        opacity:0;
+        transform:translateY(18px)
+    }
+    to{
+        opacity:1;
+        transform:translateY(0)
+    }
+}
+
+.glass{
+    background:linear-gradient(
+        145deg,
+        rgba(30,41,59,.78),
+        rgba(15,23,42,.60)
+    );
+    border:1px solid rgba(100,116,139,.30);
+    backdrop-filter:blur(16px)
+}
+
+.card{
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    border-color:rgba(245,158,11,.48);
+    box-shadow:0 20px 60px rgba(0,0,0,.25)
+}
+
+.field{
+    width:100%;
+    background:rgba(2,6,23,.84);
+    border:1px solid #1e293b;
+    border-radius:.7rem;
+    padding:.82rem 1rem;
+    color:#e2e8f0;
+    outline:none;
+    transition:.2s
+}
+
+.field:focus{
+    border-color:#f59e0b;
+    box-shadow:0 0 0 3px rgba(245,158,11,.08)
+}
+
+.field::placeholder{
+    color:#475569
+}
+
+.label{
+    display:block;
+    font-size:.68rem;
+    font-weight:800;
+    letter-spacing:.08em;
+    color:#cbd5e1;
+    margin-bottom:.5rem
+}
+
+.reveal{
+    animation:reveal .8s ease both
+}
+
+
+/* =========================================================
+   GLOBAL SUPPLIER NETWORK ANIMATION
+   ========================================================= */
+
+.logo-stage{
+    position:relative;
+    min-height:260px;
+    height:clamp(260px,30vw,330px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    border:1px solid rgba(100,116,139,.30);
+    border-radius:1.5rem;
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(245,158,11,.08),
+            transparent 42%
+        ),
+        rgba(2,6,23,.30);
+    box-shadow:
+        inset 0 0 80px rgba(0,0,0,.18),
+        0 25px 70px rgba(0,0,0,.16)
+}
+
+.logo-stage:before{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    border-radius:9999px;
+    background:radial-gradient(
+        circle,
+        rgba(245,158,11,.12),
+        transparent 70%
+    );
+    filter:blur(8px);
+    pointer-events:none
+}
+
+.global-animation{
+    position:absolute;
+    inset:0;
+    z-index:1;
+    pointer-events:none
+}
+
+.animated-globe{
+    position:absolute;
+    left:50%;
+    top:46%;
+    width:190px;
+    height:190px;
+    transform:translate(-50%,-50%);
+    border:1px solid rgba(245,158,11,.30);
+    border-radius:50%;
+    box-shadow:
+        0 0 30px rgba(245,158,11,.10),
+        inset 0 0 30px rgba(59,130,246,.06);
+    animation:globeGlow 5s ease-in-out infinite
+}
+
+.animated-globe:before{
+    content:"";
+    position:absolute;
+    inset:12px 48px;
+    border-left:1px solid rgba(59,130,246,.24);
+    border-right:1px solid rgba(59,130,246,.24);
+    border-radius:50%
+}
+
+.animated-globe:after{
+    content:"";
+    position:absolute;
+    left:12px;
+    right:12px;
+    top:50%;
+    height:58px;
+    transform:translateY(-50%);
+    border-top:1px solid rgba(59,130,246,.20);
+    border-bottom:1px solid rgba(59,130,246,.20);
+    border-radius:50%
+}
+
+@keyframes globeGlow{
+    0%,100%{
+        box-shadow:
+            0 0 30px rgba(245,158,11,.08),
+            inset 0 0 30px rgba(59,130,246,.05)
+    }
+    50%{
+        box-shadow:
+            0 0 45px rgba(245,158,11,.17),
+            inset 0 0 35px rgba(59,130,246,.09)
+    }
+}
+
+.global-orbit{
+    position:absolute;
+    left:50%;
+    top:46%;
+    width:225px;
+    height:82px;
+    transform:translate(-50%,-50%) rotate(-18deg);
+    border:1px solid rgba(245,158,11,.27);
+    border-radius:50%;
+    animation:orbitSpin 9s linear infinite
+}
+
+.global-orbit:after{
+    content:"";
+    position:absolute;
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:#f59e0b;
+    box-shadow:
+        0 0 12px rgba(245,158,11,.85),
+        0 0 25px rgba(245,158,11,.45);
+    right:13px;
+    top:3px
+}
+
+.orbit-two{
+    width:250px;
+    height:100px;
+    transform:translate(-50%,-50%) rotate(48deg);
+    border-color:rgba(59,130,246,.23);
+    animation-duration:13s;
+    animation-direction:reverse
+}
+
+.orbit-two:after{
+    background:#3b82f6;
+    box-shadow:
+        0 0 12px rgba(59,130,246,.85),
+        0 0 25px rgba(59,130,246,.40);
+    right:auto;
+    left:14px;
+    top:8px
+}
+
+@keyframes orbitSpin{
+    from{
+        transform:translate(-50%,-50%) rotate(-18deg)
+    }
+    to{
+        transform:translate(-50%,-50%) rotate(342deg)
+    }
+}
+
+.trade-route{
+    position:absolute;
+    height:1px;
+    transform-origin:left center;
+    opacity:.55;
+    background:linear-gradient(
+        90deg,
+        rgba(245,158,11,0),
+        rgba(245,158,11,.75),
+        rgba(59,130,246,.15)
+    );
+    animation:routePulse 4s ease-in-out infinite
+}
+
+.route-one{
+    width:150px;
+    left:12%;
+    top:37%;
+    transform:rotate(10deg)
+}
+
+.route-two{
+    width:135px;
+    right:10%;
+    top:34%;
+    transform:rotate(158deg);
+    animation-delay:-1s
+}
+
+.route-three{
+    width:145px;
+    left:14%;
+    bottom:29%;
+    transform:rotate(-17deg);
+    animation-delay:-2s
+}
+
+.route-four{
+    width:155px;
+    right:8%;
+    bottom:27%;
+    transform:rotate(198deg);
+    animation-delay:-3s
+}
+
+@keyframes routePulse{
+    0%,100%{
+        opacity:.25
+    }
+    50%{
+        opacity:.8
+    }
+}
+
+.route-node{
+    position:absolute;
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:#f59e0b;
+    box-shadow:
+        0 0 10px rgba(245,158,11,.85),
+        0 0 20px rgba(245,158,11,.35);
+    animation:nodePulse 3s ease-in-out infinite
+}
+
+.n1{
+    left:12%;
+    top:35%
+}
+
+.n2{
+    right:9%;
+    top:31%;
+    animation-delay:-.7s
+}
+
+.n3{
+    left:14%;
+    bottom:27%;
+    animation-delay:-1.4s
+}
+
+.n4{
+    right:8%;
+    bottom:25%;
+    animation-delay:-2.1s
+}
+
+@keyframes nodePulse{
+    0%,100%{
+        transform:scale(.65);
+        opacity:.45
+    }
+    50%{
+        transform:scale(1.35);
+        opacity:1
+    }
+}
+
+.trade-aircraft{
+    position:absolute;
+    font-size:1.2rem;
+    left:19%;
+    top:31%;
+    color:#e2e8f0;
+    filter:
+        drop-shadow(0 0 8px rgba(245,158,11,.65));
+    animation:aircraftMove 8s ease-in-out infinite
+}
+
+@keyframes aircraftMove{
+    0%{
+        left:18%;
+        top:32%;
+        transform:rotate(12deg)
+    }
+    45%{
+        left:40%;
+        top:27%;
+        transform:rotate(7deg)
+    }
+    100%{
+        left:70%;
+        top:34%;
+        transform:rotate(12deg)
+    }
+}
+
+.trade-ship{
+    position:absolute;
+    font-size:1.35rem;
+    right:17%;
+    bottom:20%;
+    filter:
+        drop-shadow(0 0 8px rgba(59,130,246,.65));
+    animation:shipMove 10s ease-in-out infinite
+}
+
+@keyframes shipMove{
+    0%,100%{
+        transform:translateX(0) translateY(0)
+    }
+    50%{
+        transform:translateX(-22px) translateY(-6px)
+    }
+}
+
+.cargo-light{
+    position:absolute;
+    left:50%;
+    bottom:12%;
+    width:70px;
+    height:2px;
+    transform:translateX(-50%);
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(245,158,11,.7),
+        transparent
+    );
+    box-shadow:0 0 18px rgba(245,158,11,.25);
+    animation:cargoPulse 3.5s ease-in-out infinite
+}
+
+@keyframes cargoPulse{
+    0%,100%{
+        opacity:.25;
+        width:45px
+    }
+    50%{
+        opacity:1;
+        width:100px
+    }
+}
+
+.logo-dot{
+    position:absolute;
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:#f59e0b;
+    box-shadow:0 0 10px rgba(245,158,11,.8);
+    z-index:3;
+    animation:pulse 3s ease-in-out infinite
+}
+
+.logo-dot.d1{
+    left:19%;
+    top:22%
+}
+
+.logo-dot.d2{
+    right:18%;
+    top:20%;
+    animation-delay:-1s
+}
+
+.logo-dot.d3{
+    right:24%;
+    bottom:17%;
+    animation-delay:-2s
+}
+
+.logo-caption{
+    position:absolute;
+    left:50%;
+    bottom:14px;
+    transform:translateX(-50%);
+    z-index:4;
+    width:max-content;
+    max-width:90%;
+    padding:.4rem .75rem;
+    border-radius:9999px;
+    border:1px solid rgba(100,116,139,.25);
+    background:rgba(2,6,23,.62);
+    backdrop-filter:blur(10px);
+    color:#94a3b8;
+    font-size:.6rem;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    text-align:center
+}
+
+
+/* =========================================================
+   MULTI SELECT / UPLOAD / SMART SELECT
+   ========================================================= */
+
+.multi-select{
+    position:relative
+}
+
+.multi-select-button{
+    width:100%;
+    min-height:48px;
+    background:rgba(2,6,23,.84);
+    border:1px solid #1e293b;
+    border-radius:.7rem;
+    padding:.7rem 1rem;
+    color:#e2e8f0;
+    text-align:left;
+    cursor:pointer;
+    transition:.2s
+}
+
+.multi-select-button:focus,
+.multi-select-button:hover{
+    border-color:#f59e0b
+}
+
+.multi-select-menu{
+    position:absolute;
+    left:0;
+    right:0;
+    top:calc(100% + 6px);
+    z-index:50;
+    max-height:260px;
+    overflow-y:auto;
+    padding:.45rem;
+    border:1px solid rgba(100,116,139,.35);
+    border-radius:.8rem;
+    background:rgba(15,23,42,.97);
+    box-shadow:0 20px 50px rgba(0,0,0,.4);
+    backdrop-filter:blur(16px);
+    display:none
+}
+
+.multi-select.open .multi-select-menu{
+    display:block
+}
+
+.multi-option{
+    display:flex;
+    align-items:center;
+    gap:.65rem;
+    padding:.65rem .7rem;
+    border-radius:.55rem;
+    cursor:pointer;
+    color:#cbd5e1;
+    font-size:.82rem
+}
+
+.multi-option:hover{
+    background:rgba(245,158,11,.08);
+    color:#f8fafc
+}
+
+.multi-option input{
+    accent-color:#f59e0b
+}
+
+.upload-box{
+    border:1px dashed rgba(100,116,139,.45);
+    border-radius:.8rem;
+    background:rgba(2,6,23,.45);
+    transition:.2s
+}
+
+.upload-box:hover{
+    border-color:rgba(245,158,11,.55);
+    background:rgba(245,158,11,.035)
+}
+
+.smart-select{
+    position:relative
+}
+
+.smart-select select{
+    appearance:none;
+    padding-right:2.7rem
+}
+
+.smart-select:after{
+    content:"⌄";
+    position:absolute;
+    right:1rem;
+    top:50%;
+    transform:translateY(-50%);
+    color:#64748b;
+    pointer-events:none
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media(max-width:768px){
+
+    .logo-stage{
+        min-height:245px;
+        height:275px
+    }
+
+    .animated-globe{
+        width:165px;
+        height:165px
+    }
+
+    .global-orbit{
+        width:200px;
+        height:72px
+    }
+
+    .orbit-two{
+        width:220px;
+        height:90px
+    }
+
+    .route-one,
+    .route-two,
+    .route-three,
+    .route-four{
+        width:105px
+    }
+
+    .trade-aircraft{
+        font-size:1rem
+    }
+
+    .trade-ship{
+        font-size:1.1rem
+    }
+
+    .logo-caption{
+        font-size:.52rem;
+        bottom:10px
+    }
+}
+
+@media(max-width:480px){
+
+    .logo-stage{
+        min-height:220px;
+        height:240px
+    }
+
+    .animated-globe{
+        width:145px;
+        height:145px
+    }
+
+    .global-orbit{
+        width:175px;
+        height:64px
+    }
+
+    .orbit-two{
+        width:190px;
+        height:78px
+    }
+
+    .route-one,
+    .route-two,
+    .route-three,
+    .route-four{
+        width:85px
+    }
+
+    .logo-caption{
+        font-size:.47rem;
+        letter-spacing:.05em;
+        max-width:94%
+    }
+}
+
+@media(prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+        animation-duration:.01ms!important;
+        animation-iteration-count:1!important;
+        scroll-behavior:auto!important
+    }
+}
+</style>
+</head>
+
+
+<body class="font-sans text-slate-200">
+
+<div class="site-bg">
+    <div class="orb a"></div>
+    <div class="orb b"></div>
+    <div class="orb c"></div>
+</div>
+
+
+<!-- =========================================================
+     TOP INFO BAR
+     ========================================================= -->
+
+<div class="border-b border-slate-800/70 bg-slate-950/60">
+    <div class="mx-auto max-w-7xl px-5 py-2 text-center text-[10px] font-bold uppercase tracking-[0.18em] text-slate-400 sm:text-xs">
+        Verified Supplier Network · India · Bangladesh · Nepal
+    </div>
+</div>
+
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header class="sticky top-0 z-40 border-b border-slate-800/70 bg-slate-950/80 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3">
+
+        <a href="index.html" class="flex min-w-0 items-center gap-3">
+
+            <div class="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-amber-500/20 bg-slate-900/80">
+                <img
+                    src="A Logo.png"
+                    alt="ADHIL INTERNATIONAL official logo"
+                    class="h-full w-full object-contain"
+                >
+            </div>
+
+            <div class="min-w-0">
+                <div class="truncate text-sm font-extrabold tracking-[0.12em] text-white sm:text-base">
+                    ADHIL INTERNATIONAL
+                </div>
+                <div class="hidden text-[9px] font-semibold uppercase tracking-[0.16em] text-slate-500 sm:block">
+                    Global Sourcing · Procurement · Trade
+                </div>
+            </div>
+
+        </a>
+
+        <a
+            href="index.html#commercial-inquiry"
+            class="shrink-0 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 px-4 py-2.5 text-xs font-extrabold text-slate-950 shadow-lg shadow-amber-500/10 transition hover:-translate-y-0.5 hover:shadow-amber-500/20 sm:px-5 sm:text-sm"
+        >
+            Initiate B2B Trade
+        </a>
+
+    </div>
+</header>
+
+
+<main>
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section class="relative overflow-hidden">
+    <div class="mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 lg:grid-cols-[1.05fr_.95fr] lg:py-24">
+
+        <div class="reveal">
+
+            <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-amber-500/20 bg-amber-500/5 px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.16em] text-amber-400">
+                Supplier Partnership
+            </div>
+
+            <h1 class="max-w-4xl text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
+                Become Part of the
+                <span class="text-amber-400">ADHIL INTERNATIONAL</span>
+                Supplier Network.
+            </h1>
+
+            <p class="mt-6 max-w-2xl text-base leading-8 text-slate-400 sm:text-lg">
+                We are building a verified supplier network across India, Bangladesh and Nepal to connect capable manufacturers, processors, exporters and specialist suppliers with international B2B procurement opportunities.
+            </p>
+
+            <p class="mt-4 max-w-2xl text-sm leading-7 text-slate-500">
+                ADHIL INTERNATIONAL does not manufacture products. We source through qualified supplier relationships, assess commercial and product readiness, coordinate procurement and support cross-border trade execution.
+            </p>
+
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+
+                <a
+                    href="#supplier-application"
+                    class="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 px-6 py-3.5 text-sm font-extrabold text-slate-950 shadow-xl shadow-amber-500/10 transition hover:-translate-y-0.5"
+                >
+                    Apply for Supplier Empanelment →
+                </a>
+
+                <a
+                    href="#empanelment"
+                    class="inline-flex items-center justify-center rounded-xl border border-slate-700 bg-slate-900/60 px-6 py-3.5 text-sm font-bold text-slate-200 transition hover:border-amber-500/40 hover:bg-slate-800/70"
+                >
+                    View Partnership Process
+                </a>
+
+            </div>
+
+            <div class="mt-8 flex flex-wrap gap-2">
+                <span class="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                    India
+                </span>
+                <span class="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                    Bangladesh
+                </span>
+                <span class="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                    Nepal
+                </span>
+                <span class="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                    GCC
+                </span>
+                <span class="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                    Asia
+                </span>
+                <span class="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                    Europe
+                </span>
+                <span class="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                    Africa
+                </span>
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             GLOBAL ANIMATION
+             SECOND LOGO REMOVED — NOTHING ELSE CHANGED
+             ===================================================== -->
+
+        <div class="reveal">
+
+            <div
+                class="logo-stage"
+                aria-label="ADHIL INTERNATIONAL global supplier network"
+            >
+
+                <div class="global-animation" aria-hidden="true">
+
+                    <div class="animated-globe"></div>
+
+                    <div class="global-orbit"></div>
+
+                    <div class="global-orbit orbit-two"></div>
+
+                    <div class="trade-route route-one"></div>
+
+                    <div class="trade-route route-two"></div>
+
+                    <div class="trade-route route-three"></div>
+
+                    <div class="trade-route route-four"></div>
+
+                    <span class="route-node n1"></span>
+
+                    <span class="route-node n2"></span>
+
+                    <span class="route-node n3"></span>
+
+                    <span class="route-node n4"></span>
+
+                    <span class="trade-aircraft">✈</span>
+
+                    <span class="trade-ship">🚢</span>
+
+                    <span class="cargo-light"></span>
+
+                </div>
+
+
+                <span class="logo-dot d1"></span>
+                <span class="logo-dot d2"></span>
+                <span class="logo-dot d3"></span>
+
+                <div class="logo-caption">
+                    Supplier → Verification → Buyer Matching → Trade Execution
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =========================================================
+     BENEFITS
+     ========================================================= -->
+
+<section class="mx-auto max-w-7xl px-5 py-16">
+
+    <div class="mb-10 max-w-2xl">
+        <div class="text-[10px] font-extrabold uppercase tracking-[0.18em] text-amber-400">
+            Why Partner With Us
+        </div>
+
+        <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+            More than a supplier listing.
+        </h2>
+
+        <p class="mt-4 text-sm leading-7 text-slate-400">
+            Our objective is to develop dependable supplier relationships that can support real international procurement requirements.
+        </p>
+    </div>
+
+
+    <div class="grid gap-5 md:grid-cols-3">
+
+        <div class="card glass rounded-2xl p-6">
+            <div class="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-amber-500/10 text-xl text-amber-400">
+                ✓
+            </div>
+
+            <h3 class="text-lg font-extrabold text-white">
+                Qualified Opportunities
+            </h3>
+
+            <p class="mt-3 text-sm leading-7 text-slate-400">
+                We work toward matching supplier capability with genuine B2B sourcing requirements rather than simply collecting supplier contacts.
+            </p>
+        </div>
+
+
+        <div class="card glass rounded-2xl p-6">
+            <div class="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-500/10 text-xl text-blue-400">
+                ◈
+            </div>
+
+            <h3 class="text-lg font-extrabold text-white">
+                International Market Access
+            </h3>
+
+            <p class="mt-3 text-sm leading-7 text-slate-400">
+                Supplier relationships may be considered for buyer requirements across GCC, Asia, Europe, UK and Africa depending on product and trade readiness.
+            </p>
+        </div>
+
+
+        <div class="card glass rounded-2xl p-6">
+            <div class="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-500/10 text-xl text-emerald-400">
+                ↗
+            </div>
+
+            <h3 class="text-lg font-extrabold text-white">
+                Trade Coordination
+            </h3>
+
+            <p class="mt-3 text-sm leading-7 text-slate-400">
+                Where suitable, we coordinate commercial communication, procurement requirements, documentation and cross-border trade execution.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     EMPANELMENT JOURNEY
+     ========================================================= -->
+
+<section id="empanelment" class="mx-auto max-w-7xl px-5 py-16">
+
+    <div class="mb-10">
+        <div class="text-[10px] font-extrabold uppercase tracking-[0.18em] text-amber-400">
+            Supplier Empanelment
+        </div>
+
+        <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+            A structured three-phase onboarding process.
+        </h2>
+
+        <p class="mt-4 max-w-2xl text-sm leading-7 text-slate-400">
+            Supplier evaluation is designed around company capability, product quality and international trade readiness.
+        </p>
+    </div>
+
+
+    <div class="grid gap-5 lg:grid-cols-3">
+
+        <div class="glass rounded-2xl p-6">
+
+            <div class="flex items-center justify-between">
+                <span class="text-xs font-extrabold uppercase tracking-[0.16em] text-amber-400">
+                    Phase 01
+                </span>
+
+                <span class="text-xs font-bold text-slate-600">
+                    01
+                </span>
+            </div>
+
+            <h3 class="mt-5 text-xl font-extrabold text-white">
+                Company & Eligibility
+            </h3>
+
+            <p class="mt-3 text-sm leading-7 text-slate-400">
+                We collect the core information required to understand your business structure, operating location, years of experience and ability to supply.
+            </p>
+
+            <ul class="mt-5 space-y-3 text-sm text-slate-400">
+                <li>• Legal / trading name</li>
+                <li>• Business location and operating hubs</li>
+                <li>• Company type and years in operation</li>
+                <li>• Export experience</li>
+                <li>• Certifications and registrations</li>
+            </ul>
+
+        </div>
+
+
+        <div class="glass rounded-2xl p-6">
+
+            <div class="flex items-center justify-between">
+                <span class="text-xs font-extrabold uppercase tracking-[0.16em] text-amber-400">
+                    Phase 02
+                </span>
+
+                <span class="text-xs font-bold text-slate-600">
+                    02
+                </span>
+            </div>
+
+            <h3 class="mt-5 text-xl font-extrabold text-white">
+                Product & Quality
+            </h3>
+
+            <p class="mt-3 text-sm leading-7 text-slate-400">
+                We assess the product categories, specifications, capacity, quality controls and documentation available for potential international procurement.
+            </p>
+
+            <ul class="mt-5 space-y-3 text-sm text-slate-400">
+                <li>• Product categories</li>
+                <li>• Product specifications</li>
+                <li>• Production / supply capacity</li>
+                <li>• Quality control systems</li>
+                <li>• Product certificates and test reports</li>
+            </ul>
+
+        </div>
+
+
+        <div class="glass rounded-2xl p-6">
+
+            <div class="flex items-center justify-between">
+                <span class="text-xs font-extrabold uppercase tracking-[0.16em] text-amber-400">
+                    Phase 03
+                </span>
+
+                <span class="text-xs font-bold text-slate-600">
+                    03
+                </span>
+            </div>
+
+            <h3 class="mt-5 text-xl font-extrabold text-white">
+                Trade Readiness
+            </h3>
+
+            <p class="mt-3 text-sm leading-7 text-slate-400">
+                We establish whether the supplier can support commercial terms, packaging, logistics, documentation and international shipment requirements.
+            </p>
+
+            <ul class="mt-5 space-y-3 text-sm text-slate-400">
+                <li>• Incoterms and payment preferences</li>
+                <li>• MOQ and lead times</li>
+                <li>• Export documentation</li>
+                <li>• Packaging and loading capability</li>
+                <li>• International logistics readiness</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONNECTION
+     ========================================================= -->
+
+<section class="mx-auto max-w-7xl px-5 py-16">
+
+    <div class="glass overflow-hidden rounded-3xl">
+
+        <div class="grid gap-8 p-7 md:grid-cols-2 md:p-10 lg:p-12">
+
+            <div>
+
+                <div class="text-[10px] font-extrabold uppercase tracking-[0.18em] text-amber-400">
+                    Supplier → Buyer Connection
+                </div>
+
+                <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-white">
+                    Your capability becomes part of a broader sourcing network.
+                </h2>
+
+                <p class="mt-5 text-sm leading-7 text-slate-400">
+                    We are developing supplier relationships across India, Bangladesh and Nepal while building demand-side connections across international markets.
+                </p>
+
+            </div>
+
+
+            <div class="grid grid-cols-2 gap-3">
+
+                <div class="rounded-xl border border-slate-800 bg-slate-950/50 p-4">
+                    <div class="text-2xl font-extrabold text-amber-400">IN</div>
+                    <div class="mt-1 text-xs font-bold text-slate-400">
+                        India
+                    </div>
+                </div>
+
+                <div class="rounded-xl border border-slate-800 bg-slate-950/50 p-4">
+                    <div class="text-2xl font-extrabold text-amber-400">BD</div>
+                    <div class="mt-1 text-xs font-bold text-slate-400">
+                        Bangladesh
+                    </div>
+                </div>
+
+                <div class="rounded-xl border border-slate-800 bg-slate-950/50 p-4">
+                    <div class="text-2xl font-extrabold text-amber-400">NP</div>
+                    <div class="mt-1 text-xs font-bold text-slate-400">
+                        Nepal
+                    </div>
+                </div>
+
+                <div class="rounded-xl border border-slate-800 bg-slate-950/50 p-4">
+                    <div class="text-2xl font-extrabold text-amber-400">GCC</div>
+                    <div class="mt-1 text-xs font-bold text-slate-400">
+                        Middle East
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SUPPLIER APPLICATION
+     ========================================================= -->
+
+<section id="supplier-application" class="mx-auto max-w-7xl px-5 py-16">
+
+    <div class="mb-10 max-w-3xl">
+
+        <div class="text-[10px] font-extrabold uppercase tracking-[0.18em] text-amber-400">
+            Supplier Application
+        </div>
+
+        <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+            Submit your company for supplier empanelment.
+        </h2>
+
+        <p class="mt-4 text-sm leading-7 text-slate-400">
+            Please provide accurate information. Submission does not automatically guarantee approval, buyer introduction or an order. Supplier suitability is assessed against specific procurement requirements and trade readiness.
+        </p>
+
+    </div>
+
+
+    <form
+        id="supplierForm"
+        action="https://formsubmit.co/adhilinternational.official@gmail.com"
+        method="POST"
+        enctype="multipart/form-data"
+        class="space-y-8"
+    >
+
+        <input type="hidden" name="_subject" value="New Supplier Partnership Application | ADHIL INTERNATIONAL">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_url" value="https://adhilinternational.github.io/supplier-partnership.html">
+        <input type="hidden" name="_next" value="https://adhilinternational.github.io/supplier-partnership.html">
+
+        <!-- =====================================================
+             PHASE 01
+             ===================================================== -->
+
+        <div class="glass rounded-3xl p-6 sm:p-8">
+
+            <div class="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+
+                <div>
+                    <div class="text-[10px] font-extrabold uppercase tracking-[0.18em] text-amber-400">
+                        Phase 01
+                    </div>
+
+                    <h3 class="mt-2 text-2xl font-extrabold text-white">
+                        Company & Eligibility
+                    </h3>
+                </div>
+
+                <div class="text-xs font-bold text-slate-500">
+                    Company Profile
+                </div>
+
+            </div>
+
+
+            <div class="grid gap-5 md:grid-cols-2">
+
+                <div>
+                    <label class="label">
+                        LEGAL / REGISTERED COMPANY NAME *
+                    </label>
+                    <input
+                        type="text"
+                        name="company_name"
+                        class="field"
+                        placeholder="Registered company name"
+                        required
+                    >
+                </div>
+
+
+                <div>
+                    <label class="label">
+                        TRADING / BRAND NAME
+                    </label>
+                    <input
+                        type="text"
+                        name="trading_name"
+                        class="field"
+                        placeholder="Trading or brand name"
+                    >
+                </div>
+
+
+                <div>
+                    <label class="label">
+                        COMPANY TYPE *
+                    </label>
+
+                    <div class="smart-select">
+                        <select name="company_type" class="field" required>
+                            <option value="">Select company type</option>
+                            <option>Manufacturer</option>
+                            <option>Processor</option>
+                            <option>Exporter</option>
+                            <option>Trader / Distributor</option>
+                            <option>Farmer / Producer Group</option>
+                            <option>Cooperative</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div>
+                    <label class="label">
+                        COUNTRY *
+                    </label>
+
+                    <div class="smart-select">
+                        <select name="country" class="field" required>
+                            <option value="">Select country</option>
+                            <option>India</option>
+                            <option>Bangladesh</option>
+                            <option>Nepal</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div>
+                    <label class="label">
+                        CITY / PRIMARY OPERATING LOCATION *
+                    </label>
+                    <input
+                        type="text"
+                        name="city"
+                        class="field"
+                        placeholder="City / region"
+                        required
+                    >
+                </div>
+
+
+                <div>
+                    <label class="label">
+                        YEARS IN OPERATION *
+                    </label>
+                    <input
+                        type="number"
+                        name="years_in_operation"
+                        min="0"
+                        class="field"
+                        placeholder="e.g. 8"
+                        required
+                    >
+                </div>
+
+
+                <div>
+                    <label class="label">
+                        WEBSITE
+                    </label>
+                    <input
+                        type="url"
+                        name="website"
+                        class="field"
+                        placeholder="https://"
+                    >
+                </div>
+
+
+                <div>
+                    <label class="label">
+                        PRIMARY CONTACT NAME *
+                    </label>
+                    <input
+                        type="text"
+                        name="contact_name"
+                        class="field"
+                        placeholder="Full name"
+                        required
+                    >
+                </div>
+
+
+                <div>
+                    <label class="label">
+                        EMAIL *
+                    </label>
+                    <input
+                        type="email"
+                        name="email"
+                        class="field"
+                        placeholder="name@company.com"
+                        required
+                    >
+                </div>
+
+
+                <div>
+                    <label class="label">
+                        PHONE / WHATSAPP *
+                    </label>
+                    <input
+                        type="tel"
+                        name="phone"
+                        class="field"
+                        placeholder="+91 / +880 / +977"
+                        required
+                    >
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             PHASE 02
+             ===================================================== -->
+
+        <div class="glass rounded-3xl p-6 sm:p-8">
+
+            <div class="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+
+                <div>
+                    <div class="text-[10px] font-extrabold uppercase tracking-[0.18em] text-amber-400">
+                        Phase 02
+                    </div>
+
+                    <h3 class="mt-2 text-2xl font-extrabold text-white">
+                        Product & Quality
+                    </h3>
+                </div>
+
+                <div class="text-xs font-bold text-slate-500">
+                    Product Capability
+                </div>
+
+            </div>
+
+
+            <div class="space-y-6">
+
+                <div>
+                    <label class="label">
+                        SUPPLIER CATEGORY / PRODUCT CATEGORIES *
+                    </label>
+
+                    <div class="multi-select" data-multi-select>
+
+                        <button
+                            type="button"
+                            class="multi-select-button"
+                            aria-expanded="false"
+                        >
+                            Select applicable categories
+                        </button>
+
+                        <div class="multi-select-menu">
+
+                            <label class="multi-option">
+                                <input
+                                    type="checkbox"
+                                    name="supplier_categories[]"
+                                    value="Medical Devices & Consumables"
+                                >
+                                <span>Medical Devices & Consumables</span>
+                            </label>
+
+                            <label class="multi-option">
+                                <input
+                                    type="checkbox"
+                                    name="supplier_categories[]"
+                                    value="Agro Commodities — Nuts & Spices"
+                                >
+                                <span>Agro Commodities — Nuts & Spices</span>
+                            </label>
+
+                            <label class="multi-option">
+                                <input
+                                    type="checkbox"
+                                    name="supplier_categories[]"
+                                    value="Coir & Coconut"
+                                >
+                                <span>Coir & Coconut</span>
+                            </label>
+
+                            <label class="multi-option">
+                                <input
+                                    type="checkbox"
+                                    name="supplier_categories[]"
+                                    value="Cotton Yarn"
+                                >
+                                <span>Cotton Yarn</span>
+                            </label>
+
+                            <label class="multi-option">
+                                <input
+                                    type="checkbox"
+                                    name="supplier_categories[]"
+                                    value="Industrial Steel & Packaging"
+                                >
+                                <span>Industrial Steel & Packaging</span>
+                            </label>
+
+                            <label class="multi-option">
+                                <input
+                                    type="checkbox"
+                                    name="supplier_categories[]"
+                                    value="Indian Agro & Processed Goods"
+                                >
+                                <span>Indian Agro & Processed Goods</span>
+                            </label>
+
+                            <label class="multi-option">
+                                <input
+                                    type="checkbox"
+                                    name="supplier_categories[]"
+                                    value="RMG"
+                                >
+                                <span>RMG</span>
+                            </label>
+
+                            <label class="multi-option">
+                                <input
+                                    type="checkbox"
+                                    name="supplier_categories[]"
+                                    value="Jute"
+                                >
+                                <span>Jute</span>
+                            </label>
+
+                            <label class="multi-option">
+                                <input
+                                    type="checkbox"
+                                    name="supplier_categories[]"
+                                    value="Bags"
+                                >
+                                <span>Bags</span>
+                            </label>
+
+                            <label class="multi-option">
+                                <input
+                                    type="checkbox"
+                                    name="supplier_categories[]"
+                                    value="Handicrafts"
+                                >
+                                <span>Handicrafts</span>
+                            </label>
+
+                            <label class="multi-option">
+                                <input
+                                    type="checkbox"
+                                    name="supplier_categories[]"
+                                    value="Leather"
+                                >
+                                <span>Leather</span>
+                            </label>
+
+                            <label class="multi-option">
+                                <input
+                                    type="checkbox"
+                                    name="supplier_categories[]"
+                                    value="Furniture"
+                                >
+                                <span>Furniture</span>
+                            </label>
+
+                            <label class="multi-option">
+                                <input
+                                    type="checkbox"
+                                    name="supplier_categories[]"
+                                    value="Structural & Commercial Steel"
+                                >
+                                <span>Structural & Commercial Steel</span>
+                            </label>
+
+                            <label class="multi-option">
+                                <input
+                                    type="checkbox"
+                                    name="supplier_categories[]"
+                                    value="Other"
+                                >
+                                <span>Other</span>
+                            </label>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="grid gap-5 md:grid-cols-2">
+
+                    <div>
+                        <label class="label">
+                            MAIN PRODUCTS / ITEMS *
+                        </label>
+
+                        <textarea
+                            name="main_products"
+                            rows="5"
+                            class="field"
+                            placeholder="List your principal products, grades, specifications or product lines."
+                            required
+                        ></textarea>
+                    </div>
+
+
+                    <div>
+                        <label class="label">
+                            PRODUCT SPECIFICATIONS / GRADES
+                        </label>
+
+                        <textarea
+                            name="product_specifications"
+                            rows="5"
+                            class="field"
+                            placeholder="Grades, sizes, standards, packaging formats, certifications, etc."
+                        ></textarea>
+                    </div>
+
+                </div>
+
+
+                <div class="grid gap-5 md:grid-cols-3">
+
+                    <div>
+                        <label class="label">
+                            MONTHLY / ANNUAL CAPACITY
+                        </label>
+                        <input
+                            type="text"
+                            name="capacity"
+                            class="field"
+                            placeholder="e.g. 500 MT/month"
+                        >
+                    </div>
+
+
+                    <div>
+                        <label class="label">
+                            MOQ
+                        </label>
+                        <input
+                            type="text"
+                            name="moq"
+                            class="field"
+                            placeholder="Minimum order quantity"
+                        >
+                    </div>
+
+
+                    <div>
+                        <label class="label">
+                            TYPICAL LEAD TIME
+                        </label>
+                        <input
+                            type="text"
+                            name="lead_time"
+                            class="field"
+                            placeholder="e.g. 20–30 days"
+                        >
+                    </div>
+
+                </div>
+
+
+                <div class="grid gap-5 md:grid-cols-2">
+
+                    <div>
+                        <label class="label">
+                            QUALITY CONTROL / TESTING
+                        </label>
+
+                        <textarea
+                            name="quality_control"
+                            rows="4"
+                            class="field"
+                            placeholder="Describe your quality control, inspection, laboratory testing or QA process."
+                        ></textarea>
+                    </div>
+
+
+                    <div>
+                        <label class="label">
+                            CERTIFICATIONS / REGISTRATIONS
+                        </label>
+
+                        <textarea
+                            name="certifications"
+                            rows="4"
+                            class="field"
+                            placeholder="ISO, HACCP, BRC, FSSAI, APEDA, BSTI, EPB, product-specific certificates, etc."
+                        ></textarea>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             PHASE 03
+             ===================================================== -->
+
+        <div class="glass rounded-3xl p-6 sm:p-8">
+
+            <div class="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+
+                <div>
+                    <div class="text-[10px] font-extrabold uppercase tracking-[0.18em] text-amber-400">
+                        Phase 03
+                    </div>
+
+                    <h3 class="mt-2 text-2xl font-extrabold text-white">
+                        Trade Readiness
+                    </h3>
+                </div>
+
+                <div class="text-xs font-bold text-slate-500">
+                    Export & Commercial Capability
+                </div>
+
+            </div>
+
+
+            <div class="grid gap-5 md:grid-cols-2">
+
+                <div>
+                    <label class="label">
+                        PREVIOUS EXPORT MARKETS
+                    </label>
+
+                    <textarea
+                        name="export_markets"
+                        rows="4"
+                        class="field"
+                        placeholder="Countries / regions you currently export to or have supplied."
+                    ></textarea>
+                </div>
+
+
+                <div>
+                    <label class="label">
+                        EXPORT EXPERIENCE
+                    </label>
+
+                    <textarea
+                        name="export_experience"
+                        rows="4"
+                        class="field"
+                        placeholder="Briefly describe your export history, buyers or shipment experience."
+                    ></textarea>
+                </div>
+
+
+                <div>
+                    <label class="label">
+                        PREFERRED INCOTERMS
+                    </label>
+
+                    <input
+                        type="text"
+                        name="incoterms"
+                        class="field"
+                        placeholder="FOB / CIF / CFR / EXW / etc."
+                    >
+                </div>
+
+
+                <div>
+                    <label class="label">
+                        PAYMENT TERMS
+                    </label>
+
+                    <input
+                        type="text"
+                        name="payment_terms"
+                        class="field"
+                        placeholder="LC / TT / advance / negotiated"
+                    >
+                </div>
+
+
+                <div>
+                    <label class="label">
+                        PORT / ICD / LOGISTICS HUB
+                    </label>
+
+                    <input
+                        type="text"
+                        name="logistics_hub"
+                        class="field"
+                        placeholder="Nearest seaport, ICD or logistics hub"
+                    >
+                </div>
+
+
+                <div>
+                    <label class="label">
+                        PACKAGING / LOADING CAPABILITY
+                    </label>
+
+                    <input
+                        type="text"
+                        name="packaging_loading"
+                        class="field"
+                        placeholder="Container loading / pallet / bulk / custom packaging"
+                    >
+                </div>
+
+
+                <div class="md:col-span-2">
+
+                    <label class="label">
+                        EXPORT DOCUMENTATION AVAILABLE
+                    </label>
+
+                    <textarea
+                        name="export_documentation"
+                        rows="4"
+                        class="field"
+                        placeholder="Commercial invoice, packing list, COO, phytosanitary, health certificate, test report, MSDS, etc."
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             DOCUMENTS / FILES
+             ===================================================== -->
+
+        <div class="glass rounded-3xl p-6 sm:p-8">
+
+            <div class="mb-7">
+
+                <div class="text-[10px] font-extrabold uppercase tracking-[0.18em] text-amber-400">
+                    Supporting Information
+                </div>
+
+                <h3 class="mt-2 text-2xl font-extrabold text-white">
+                    Upload company or product materials.
+                </h3>
+
+                <p class="mt-3 text-sm leading-7 text-slate-500">
+                    You may provide brochures, certificates, company profiles, product lists, test reports, product images or other relevant materials.
+                </p>
+
+            </div>
+
+
+            <div class="grid gap-5 md:grid-cols-2">
+
+                <div class="upload-box p-5">
+
+                    <label class="label">
+                        COMPANY / CERTIFICATION DOCUMENTS
+                    </label>
+
+                    <input
+                        type="file"
+                        name="attachment[]"
+                        multiple
+                        class="block w-full text-xs text-slate-400 file:mr-4 file:rounded-lg file:border-0 file:bg-amber-500/10 file:px-4 file:py-2 file:text-xs file:font-bold file:text-amber-400 hover:file:bg-amber-500/20"
+                        accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png"
+                    >
+
+                    <p class="mt-3 text-[10px] leading-5 text-slate-600">
+                        Multiple files allowed. Combined file size across both upload areas must not exceed 10 MB.
+                    </p>
+
+                </div>
+
+
+                <div class="upload-box p-5">
+
+                    <label class="label">
+                        PRODUCT VISUALS / BROCHURES
+                    </label>
+
+                    <input
+                        type="file"
+                        name="product_visual[]"
+                        multiple
+                        class="block w-full text-xs text-slate-400 file:mr-4 file:rounded-lg file:border-0 file:bg-amber-500/10 file:px-4 file:py-2 file:text-xs file:font-bold file:text-amber-400 hover:file:bg-amber-500/20"
+                        accept=".pdf,.jpg,.jpeg,.png,.webp"
+                    >
+
+                    <p class="mt-3 text-[10px] leading-5 text-slate-600">
+                        Multiple files allowed. Combined file size across both upload areas must not exceed 10 MB.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             CONFIDENTIALITY
+             ===================================================== -->
+
+        <div class="glass rounded-3xl p-6 sm:p-8">
+
+            <div class="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
+
+                <div>
+
+                    <div class="text-[10px] font-extrabold uppercase tracking-[0.18em] text-amber-400">
+                        Confidentiality
+                    </div>
+
+                    <h3 class="mt-2 text-xl font-extrabold text-white">
+                        Supplier information is handled for sourcing and qualification purposes.
+                    </h3>
+
+                    <p class="mt-3 text-sm leading-7 text-slate-500">
+                        Buyer identity and sensitive commercial information will not be shared with suppliers unless required for an approved transaction, quotation, negotiation or execution step.
+                    </p>
+
+                </div>
+
+
+                <label class="flex cursor-pointer items-start gap-3 rounded-xl border border-slate-800 bg-slate-950/50 p-4 lg:max-w-sm">
+
+                    <input
+                        type="checkbox"
+                        name="confidentiality_agreement"
+                        value="Agreed"
+                        required
+                        class="mt-1 h-4 w-4 accent-amber-500"
+                    >
+
+                    <span class="text-xs leading-5 text-slate-400">
+                        I acknowledge and agree to the confidentiality and supplier qualification principles described above.
+                    </span>
+
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             DECLARATION
+             ===================================================== -->
+
+        <div class="rounded-2xl border border-amber-500/20 bg-amber-500/5 p-5">
+
+            <label class="flex cursor-pointer items-start gap-3">
+
+                <input
+                    type="checkbox"
+                    name="supplier_declaration"
+                    value="Confirmed"
+                    required
+                    class="mt-1 h-4 w-4 accent-amber-500"
+                >
+
+                <span class="text-xs leading-6 text-slate-400">
+                    I confirm that the information submitted is accurate to the best of my knowledge and that I am authorized to represent the supplier/company in this application.
+                </span>
+
+            </label>
+
+        </div>
+
+
+        <!-- =====================================================
+             SUBMIT
+             ===================================================== -->
+
+        <div class="flex flex-col items-center justify-between gap-5 rounded-3xl border border-slate-800 bg-slate-950/50 p-6 sm:flex-row sm:p-8">
+
+            <div>
+
+                <div class="text-sm font-extrabold text-white">
+                    Ready to join the network?
+                </div>
+
+                <p class="mt-1 text-xs leading-5 text-slate-500">
+                    Our team will review the submission and contact you if the profile is relevant to current or future procurement requirements.
+                </p>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="w-full rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 px-7 py-3.5 text-sm font-extrabold text-slate-950 shadow-xl shadow-amber-500/10 transition hover:-translate-y-0.5 hover:shadow-amber-500/20 sm:w-auto"
+            >
+                Submit Supplier Application →
+            </button>
+
+        </div>
+
+
+        <div
+            id="supplierFormStatus"
+            class="hidden rounded-xl border px-4 py-3 text-xs font-bold"
+            role="status"
+            aria-live="polite"
+        ></div>
+
+    </form>
+
+</section>
+
+
+<!-- =========================================================
+     WHAT HAPPENS NEXT
+     ========================================================= -->
+
+<section class="mx-auto max-w-7xl px-5 py-16">
+
+    <div class="glass rounded-3xl p-7 sm:p-10">
+
+        <div class="max-w-3xl">
+
+            <div class="text-[10px] font-extrabold uppercase tracking-[0.18em] text-amber-400">
+                What Happens Next
+            </div>
+
+            <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-white">
+                From application to potential commercial opportunity.
+            </h2>
+
+            <p class="mt-4 text-sm leading-7 text-slate-400">
+                Supplier applications are reviewed based on company credibility, product suitability, quality readiness, capacity and ability to support international trade requirements.
+            </p>
+
+        </div>
+
+
+        <div class="mt-8 grid gap-4 md:grid-cols-4">
+
+            <div class="rounded-xl border border-slate-800 bg-slate-950/50 p-5">
+                <div class="text-xs font-extrabold text-amber-400">01</div>
+                <div class="mt-3 text-sm font-extrabold text-white">
+                    Application Review
+                </div>
+                <p class="mt-2 text-xs leading-5 text-slate-500">
+                    Initial assessment of submitted company and product information.
+                </p>
+            </div>
+
+
+            <div class="rounded-xl border border-slate-800 bg-slate-950/50 p-5">
+                <div class="text-xs font-extrabold text-amber-400">02</div>
+                <div class="mt-3 text-sm font-extrabold text-white">
+                    Supplier Qualification
+                </div>
+                <p class="mt-2 text-xs leading-5 text-slate-500">
+                    Additional information may be requested where required.
+                </p>
+            </div>
+
+
+            <div class="rounded-xl border border-slate-800 bg-slate-950/50 p-5">
+                <div class="text-xs font-extrabold text-amber-400">03</div>
+                <div class="mt-3 text-sm font-extrabold text-white">
+                    Buyer Matching
+                </div>
+                <p class="mt-2 text-xs leading-5 text-slate-500">
+                    Suitable suppliers may be considered for relevant procurement requirements.
+                </p>
+            </div>
+
+
+            <div class="rounded-xl border border-slate-800 bg-slate-950/50 p-5">
+                <div class="text-xs font-extrabold text-amber-400">04</div>
+                <div class="mt-3 text-sm font-extrabold text-white">
+                    Trade Execution
+                </div>
+                <p class="mt-2 text-xs leading-5 text-slate-500">
+                    Commercial discussions, documentation and logistics coordination where applicable.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="border-t border-slate-800/70 bg-slate-950/60">
+
+    <div class="mx-auto max-w-7xl px-5 py-10">
+
+        <div class="flex flex-col items-center text-center">
+
+            <div class="flex h-12 w-12 items-center justify-center overflow-hidden rounded-xl border border-amber-500/20 bg-slate-900/80">
+                <img
+                    src="A Logo.png"
+                    alt="ADHIL INTERNATIONAL"
+                    class="h-full w-full object-contain"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="mt-4 text-sm font-extrabold tracking-[0.12em] text-white">
+                ADHIL INTERNATIONAL
+            </div>
+
+            <a
+                href="mailto:adhilinternational.official@gmail.com"
+                class="mt-2 text-xs font-semibold text-slate-400 transition hover:text-amber-400"
+            >
+                adhilinternational.official@gmail.com
+            </a>
+
+
+            <div class="mt-6 flex items-center justify-center gap-3">
+
+                <a
+                    href="https://www.facebook.com/share/19ag75Uyng/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                    class="flex h-9 w-9 items-center justify-center overflow-hidden rounded-lg border border-slate-800 bg-slate-900/70 transition hover:border-amber-500/30"
+                >
+                    <img
+                        src="Facebook-Icon.jpeg"
+                        alt="Facebook"
+                        class="h-full w-full object-cover"
+                    >
+                </a>
+
+
+                <a
+                    href="https://www.instagram.com/adhilinternational.official/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                    class="flex h-9 w-9 items-center justify-center overflow-hidden rounded-lg border border-slate-800 bg-slate-900/70 transition hover:border-amber-500/30"
+                >
+                    <img
+                        src="Instagram-Icon.png"
+                        alt="Instagram"
+                        class="h-full w-full object-cover"
+                    >
+                </a>
+
+
+                <a
+                    href="https://linkedin.com/company/adhilinternational/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                    class="flex h-9 w-9 items-center justify-center overflow-hidden rounded-lg border border-slate-800 bg-slate-900/70 transition hover:border-amber-500/30"
+                >
+                    <img
+                        src="LinkedIn Icon.png"
+                        alt="LinkedIn"
+                        class="h-full w-full object-cover"
+                    >
+                </a>
+
+
+                <a
+                    href="https://wa.me/971561079960"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="WhatsApp"
+                    class="flex h-9 w-9 items-center justify-center overflow-hidden rounded-lg border border-slate-800 bg-slate-900/70 transition hover:border-amber-500/30"
+                >
+                    <img
+                        src="Whatsapp Icon.png"
+                        alt="WhatsApp"
+                        class="h-full w-full object-cover"
+                    >
+                </a>
+
+            </div>
+
+
+            <div class="mt-7 text-[10px] font-semibold uppercase tracking-[0.14em] text-slate-600">
+                © 2026 ADHIL INTERNATIONAL. All rights reserved.
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script>
+/* =========================================================
+   MULTI SELECT
+   ========================================================= */
+
+function setupMultiSelect(){
+
+    document.querySelectorAll('[data-multi-select]').forEach(select=>{
+
+        const button=select.querySelector('.multi-select-button');
+        const menu=select.querySelector('.multi-select-menu');
+        const checkboxes=select.querySelectorAll('input[type="checkbox"]');
+
+        function updateLabel(){
+
+            const selected=[...checkboxes]
+                .filter(cb=>cb.checked)
+                .map(cb=>cb.parentElement.querySelector('span')?.textContent.trim() || cb.value);
+
+            if(selected.length===0){
+                button.textContent='Select applicable categories';
+            }else if(selected.length<=2){
+                button.textContent=selected.join(', ');
+            }else{
+                button.textContent=`${selected.length} categories selected`;
+            }
+
+        }
+
+        button.addEventListener('click',event=>{
+            event.stopPropagation();
+
+            const isOpen=select.classList.toggle('open');
+
+            button.setAttribute(
+                'aria-expanded',
+                isOpen ? 'true' : 'false'
+            );
+        });
+
+        checkboxes.forEach(cb=>{
+            cb.addEventListener('change',updateLabel);
+        });
+
+        updateLabel();
+
+    });
+
+
+    document.addEventListener('click',event=>{
+
+        document.querySelectorAll('[data-multi-select].open').forEach(select=>{
+
+            if(!select.contains(event.target)){
+
+                select.classList.remove('open');
+
+                const button=select.querySelector('.multi-select-button');
+
+                if(button){
+                    button.setAttribute('aria-expanded','false');
+                }
+
+            }
+
+        });
+
+    });
+
+}
+
+
+/* =========================================================
+   ESCAPE HTML
+   ========================================================= */
+
+function escapeHtml(value){
+
+    return String(value ?? '')
+        .replace(/&/g,'&amp;')
+        .replace(/</g,'&lt;')
+        .replace(/>/g,'&gt;')
+        .replace(/"/g,'&quot;')
+        .replace(/'/g,'&#039;');
+
+}
+
+
+/* =========================================================
+   FORMSUBMIT HELPERS
+   ========================================================= */
+
+function getCombinedUploadSize(form){
+
+    let total=0;
+
+    form.querySelectorAll('input[type="file"]').forEach(input=>{
+
+        [...input.files].forEach(file=>{
+            total+=file.size;
+        });
+
+    });
+
+    return total;
+}
+
+
+function formatBytes(bytes){
+
+    if(bytes===0) return '0 Bytes';
+
+    const units=[
+        'Bytes',
+        'KB',
+        'MB',
+        'GB'
+    ];
+
+    const index=Math.floor(
+        Math.log(bytes)/Math.log(1024)
+    );
+
+    return `${(bytes/Math.pow(1024,index)).toFixed(2)} ${units[index]}`;
+
+}
+
+
+/* =========================================================
+   SUPPLIER FORM
+   ========================================================= */
+
+function setupSupplierForm(){
+
+    const form=document.getElementById('supplierForm');
+
+    if(!form) return;
+
+    const status=document.getElementById('supplierFormStatus');
+
+    form.addEventListener('submit',event=>{
+
+        const categoryInputs=form.querySelectorAll(
+            'input[name="supplier_categories[]"]:checked'
+        );
+
+        if(categoryInputs.length===0){
+
+            event.preventDefault();
+
+            status.className=
+                'rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-xs font-bold text-red-300';
+
+            status.textContent=
+                'Please select at least one supplier/product category.';
+
+            status.classList.remove('hidden');
+
+            const multi=form.querySelector('[data-multi-select]');
+
+            if(multi){
+                multi.scrollIntoView({
+                    behavior:'smooth',
+                    block:'center'
+                });
+            }
+
+            return;
+        }
+
+
+        const maxBytes=10*1024*1024;
+
+        const combinedSize=getCombinedUploadSize(form);
+
+        if(combinedSize>maxBytes){
+
+            event.preventDefault();
+
+            status.className=
+                'rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-xs font-bold text-red-300';
+
+            status.textContent=
+                `Combined upload size is ${formatBytes(combinedSize)}. The maximum allowed is 10 MB across both upload areas.`;
+
+            status.classList.remove('hidden');
+
+            const upload=form.querySelector('input[type="file"]');
+
+            if(upload){
+                upload.scrollIntoView({
+                    behavior:'smooth',
+                    block:'center'
+                });
+            }
+
+            return;
+        }
+
+
+        status.className=
+            'rounded-xl border border-amber-500/20 bg-amber-500/5 px-4 py-3 text-xs font-bold text-amber-300';
+
+        status.textContent=
+            'Submitting your supplier application…';
+
+        status.classList.remove('hidden');
+
+    });
+
+
+    form.querySelectorAll('input[type="file"]').forEach(input=>{
+
+        input.addEventListener('change',()=>{
+
+            const combinedSize=getCombinedUploadSize(form);
+
+            if(combinedSize>10*1024*1024){
+
+                status.className=
+                    'rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-xs font-bold text-red-300';
+
+                status.textContent=
+                    `Combined upload size is ${formatBytes(combinedSize)}. Maximum is 10 MB across both upload areas.`;
+
+                status.classList.remove('hidden');
+
+            }else{
+
+                status.classList.add('hidden');
+
+            }
+
+        });
+
+    });
+
+}
+
+
+/* =========================================================
+   DOM READY
+   ========================================================= */
+
+document.addEventListener('DOMContentLoaded',()=>{
+
+    setupMultiSelect();
+
+    setupSupplierForm();
+
+});
+</script>
+
+</body>
+</html>
