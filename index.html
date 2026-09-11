@@ -211,7 +211,7 @@ background-size:60px 60px;transform:rotate(-5deg);animation:gridMove 22s linear 
 @media(max-width:640px){.smart-menu{position:fixed;left:1rem;right:1rem;top:50%;transform:translateY(-50%);max-height:78vh}.smart-menu button{padding:.8rem .75rem}.multi-panel{position:fixed;left:1rem;right:1rem;top:50%;transform:translateY(-50%);max-height:78vh}}
 
 /* Cinematic hero: real footage, sequential playback, restrained brand overlays */
-.cinematic-hero{min-height:calc(100svh - 90px);height:calc(100svh - 90px);background:#02050a;isolation:isolate}
+.cinematic-hero{width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);min-height:clamp(620px,78svh,820px);height:clamp(620px,78svh,820px);background:#02050a;isolation:isolate}
 .cinematic-film,.film-shot,.film-grade,.film-vignette,.film-grain{position:absolute;inset:0;width:100%;height:100%}
 .cinematic-film{overflow:hidden;background:#02050a}
 .film-shot{object-fit:cover;object-position:center;opacity:0;transform:scale(1.035);transition:opacity 1.25s cubic-bezier(.22,.61,.36,1),transform 8s cubic-bezier(.2,.7,.2,1);filter:saturate(.88) contrast(1.08) brightness(.72)}
@@ -225,7 +225,7 @@ background-size:60px 60px;transform:rotate(-5deg);animation:gridMove 22s linear 
 @keyframes filmNoise{0%{background-position:0 0}25%{background-position:24px -18px}50%{background-position:-18px 22px}75%{background-position:16px 8px}100%{background-position:-12px -16px}}
 .cinematic-content{height:100%}
 .cinematic-kicker{font-size:.68rem;font-weight:900;letter-spacing:.22em;color:#fbbf24;margin-bottom:1.35rem;opacity:.95}
-.cinematic-copy{min-height:240px;position:relative}
+.cinematic-copy{min-height:320px;position:relative}
 .film-line{position:absolute;left:0;top:0;opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.22,.61,.36,1);pointer-events:none}
 .film-line.active{opacity:1;transform:translateY(0)}
 .film-eyebrow{font-size:.66rem;font-weight:900;letter-spacing:.22em;color:rgba(226,232,240,.72);margin-bottom:.9rem}
@@ -237,7 +237,7 @@ background-size:60px 60px;transform:rotate(-5deg);animation:gridMove 22s linear 
 .film-brand{font-size:.72rem;letter-spacing:.25em;font-weight:900;color:#fbbf24}
 .film-final-title{font-size:clamp(2.2rem,5.2vw,5.5rem);line-height:1;letter-spacing:-.04em;font-weight:850;color:#fff;margin-top:.75rem;text-shadow:0 10px 45px rgba(0,0,0,.58)}
 .film-final-meta{font-size:.63rem;letter-spacing:.18em;color:#cbd5e1;font-weight:800;margin-top:1.1rem}
-.cinematic-actions{position:relative;z-index:12;display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.2rem;opacity:0;transform:translateY(12px);transition:opacity .7s ease .25s,transform .7s ease .25s}
+.cinematic-actions{position:relative;z-index:12;display:flex;gap:.75rem;flex-wrap:wrap;margin-top:.5rem;opacity:0;transform:translateY(12px);transition:opacity .7s ease .25s,transform .7s ease .25s}
 .cinematic-hero.has-started .cinematic-actions{opacity:1;transform:translateY(0)}
 .film-button{display:inline-flex;align-items:center;justify-content:center;padding:.85rem 1.15rem;border-radius:.8rem;font-size:.76rem;font-weight:900;transition:.25s;border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(10px)}
 .film-button-primary{background:#f59e0b;color:#080d1a;box-shadow:0 12px 35px rgba(245,158,11,.16)}
@@ -253,8 +253,8 @@ background-size:60px 60px;transform:rotate(-5deg);animation:gridMove 22s linear 
 .film-progress{position:absolute;z-index:20;left:0;right:0;bottom:0;height:2px;background:rgba(255,255,255,.12)}
 .film-progress span{display:block;width:0;height:100%;background:linear-gradient(90deg,#f59e0b,#fde68a);box-shadow:0 0 16px rgba(245,158,11,.45);transition:width .12s linear}
 @media(max-width:700px){
-  .cinematic-hero{min-height:calc(100svh - 76px);height:calc(100svh - 76px)}
-  .cinematic-copy{min-height:220px}
+  .cinematic-hero{min-height:clamp(600px,82svh,760px);height:clamp(600px,82svh,760px)}
+  .cinematic-copy{min-height:285px}
   .film-title{font-size:clamp(3rem,15vw,5.1rem)}
   .film-subtitle{max-width:88%}
   .cinematic-actions{margin-top:.4rem}
@@ -295,10 +295,10 @@ background-size:60px 60px;transform:rotate(-5deg);animation:gridMove 22s linear 
 <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
 <a class="nav-link hover:text-white" href="#philosophy">Philosophy</a><a class="nav-link hover:text-white" href="#sourcing-matrix">Sourcing Matrix</a><a class="nav-link hover:text-white" href="#interactive-router">Trade Router</a><a class="nav-link hover:text-white" href="#destinations">Global Footprint</a><a class="nav-link hover:text-white" href="#founder">Founder</a>
 </nav>
-<div class="flex items-center gap-3"><a href="#contact" class="hidden sm:inline-flex bg-gradient-to-r from-brand-amber to-brand-gold text-brand-dark font-extrabold px-5 py-3 rounded-xl shadow-lg shadow-amber-500/10">Initiate B2B Trade</a><button id="menuBtn" class="md:hidden w-11 h-11 rounded-xl border border-slate-700 bg-slate-900">☰</button></div>
+<div class="flex items-center gap-3"><a href="supplier-partnership.html" class="hidden lg:inline-flex items-center border border-amber-400/70 text-amber-300 hover:bg-amber-400 hover:text-slate-950 font-extrabold px-5 py-3 rounded-xl transition">Supplier Partnership</a><a href="#contact" class="hidden sm:inline-flex bg-gradient-to-r from-brand-amber to-brand-gold text-brand-dark font-extrabold px-5 py-3 rounded-xl shadow-lg shadow-amber-500/10">Initiate B2B Trade</a><button id="menuBtn" class="md:hidden w-11 h-11 rounded-xl border border-slate-700 bg-slate-900">☰</button></div>
 </div>
 <div id="mobileMenu" class="mobile-menu md:hidden border-t border-slate-800 bg-brand-dark/95 px-6 py-4">
-<div class="grid gap-3 text-sm font-semibold"><a href="#philosophy" class="py-2">Philosophy</a><a href="#sourcing-matrix" class="py-2">Sourcing Matrix</a><a href="#interactive-router" class="py-2">Trade Router</a><a href="#destinations" class="py-2">Global Footprint</a><a href="#founder" class="py-2">Founder</a><a href="#contact" class="py-2 text-amber-400">Initiate B2B Trade →</a></div>
+<div class="grid gap-3 text-sm font-semibold"><a href="#philosophy" class="py-2">Philosophy</a><a href="#sourcing-matrix" class="py-2">Sourcing Matrix</a><a href="#interactive-router" class="py-2">Trade Router</a><a href="#destinations" class="py-2">Global Footprint</a><a href="#founder" class="py-2">Founder</a><a href="supplier-partnership.html" class="py-2 text-amber-300">Supplier Partnership →</a><a href="#contact" class="py-2 text-amber-400">Initiate B2B Trade →</a></div>
 </div>
 </header>
 
@@ -364,7 +364,7 @@ background-size:60px 60px;transform:rotate(-5deg);animation:gridMove 22s linear 
 
         <div class="cinematic-scroll-hint" id="filmHint">
           <span class="hint-dot"></span>
-          <span>Scroll or tap to enter</span>
+          <span>Scroll to explore • Return to replay</span>
           <span class="hint-arrow">↓</span>
         </div>
       </div>
@@ -378,9 +378,12 @@ background-size:60px 60px;transform:rotate(-5deg);animation:gridMove 22s linear 
 <!-- PHILOSOPHY -->
 <section id="philosophy" class="py-24">
 <div class="max-w-7xl mx-auto px-6">
-<div class="max-w-3xl"><div class="text-xs font-bold uppercase tracking-[.22em] text-brand-amber">Company Philosophy</div><h2 class="text-4xl sm:text-5xl font-extrabold text-white mt-3">Start lean. Source well. Scale responsibly.</h2><p class="text-slate-400 mt-5 leading-relaxed">Adhil is currently being developed as a sourcing and trade venture. Product availability, supplier qualification, export eligibility, certifications and destination requirements are verified transaction-by-transaction.</p></div>
+<div class="max-w-3xl"><div class="text-xs font-bold uppercase tracking-[.22em] text-brand-amber">Company Philosophy</div><h2 class="text-4xl sm:text-5xl font-extrabold text-white mt-3">Start lean. Source well. Scale responsibly.</h2><p class="text-slate-400 mt-5 leading-relaxed">Adhil International is currently being developed as a sourcing and trade venture. Product availability, supplier qualification, export eligibility, certifications and destination requirements are verified transaction-by-transaction.</p></div>
 <div class="grid md:grid-cols-3 gap-6 mt-12">
+<div class="space-y-4">
+<a href="supplier-partnership.html" class="w-full inline-flex items-center justify-center bg-gradient-to-r from-brand-amber to-brand-gold text-brand-dark font-extrabold px-5 py-4 rounded-xl shadow-lg shadow-amber-500/10 hover:scale-[1.01] transition-transform">Supplier Partnership →</a>
 <div class="glass card rounded-3xl p-7"><div class="text-2xl">🟢</div><h3 class="text-xl font-extrabold text-white mt-5">Core Sourcing</h3><p class="text-sm text-slate-400 mt-3">Practical product categories to build supplier relationships around now.</p></div>
+</div>
 <div class="glass card rounded-3xl p-7"><div class="text-2xl">🟡</div><h3 class="text-xl font-extrabold text-white mt-5">Expansion</h3><p class="text-sm text-slate-400 mt-3">Food, leather, selected agriculture and industrial categories requiring additional verification.</p></div>
 <div class="glass card rounded-3xl p-7"><div class="text-2xl">🔵</div><h3 class="text-xl font-extrabold text-white mt-5">Future Specialist</h3><p class="text-sm text-slate-400 mt-3">Medical and other highly regulated categories planned only with the appropriate legal, regulatory and specialist infrastructure.</p></div>
 </div>
@@ -733,7 +736,7 @@ document.addEventListener('DOMContentLoaded',()=>{setupSmartSelects();setupMulti
 </script>
 
 <script>
-/* Cinematic film controller */
+/* Cinematic film controller — autoplay + replay a fresh episode whenever the hero is revisited */
 (function(){
   const hero = document.getElementById('cinematic-hero');
   if(!hero) return;
@@ -744,33 +747,59 @@ document.addEventListener('DOMContentLoaded',()=>{setupSmartSelects();setupMulti
   const hint = document.getElementById('filmHint');
   const finalCard = document.getElementById('filmFinal');
 
-  /* Each real clip contributes a short cinematic chapter.
-     The exact end points are capped so the hero stays ~17–18 seconds. */
   const chapters = [
     {start:0, end:4.0},
     {start:0, end:4.2},
     {start:0, end:5.0},
     {start:0, end:4.8}
   ];
+  const totalDuration = chapters.reduce((sum,c)=>sum + (c.end-c.start), 0);
 
   let started = false;
   let finished = false;
+  let hasVisited = false;
+  let wasOutside = false;
   let active = 0;
   let chapterStartedAt = 0;
   let timer = null;
+
+  function stopTimer(){
+    if(timer){ cancelAnimationFrame(timer); timer=null; }
+  }
+
+  function resetFilm(){
+    stopTimer();
+    started = false;
+    finished = false;
+    active = 0;
+    chapterStartedAt = 0;
+    hero.classList.remove('has-started');
+    hint.classList.remove('hidden');
+    finalCard.classList.remove('show');
+    progress.style.width = '0%';
+    lines.forEach(line=>line.classList.remove('active'));
+    shots.forEach((v,n)=>{
+      v.classList.toggle('is-active', n===0);
+      v.classList.remove('is-playing');
+      try{ v.pause(); v.currentTime = chapters[n].start; }catch(e){}
+    });
+  }
 
   function setChapter(i){
     active = i;
     shots.forEach((v,n)=>{
       v.classList.toggle('is-active', n===i);
-      if(n!==i){ try{v.pause()}catch(e){} }
+      if(n!==i){
+        v.classList.remove('is-playing');
+        try{v.pause()}catch(e){}
+      }
     });
     lines.forEach((line,n)=>line.classList.toggle('active', n===i));
     chapterStartedAt = performance.now();
     const v = shots[i];
-    try{
-      v.currentTime = chapters[i].start;
-    }catch(e){}
+    try{ v.currentTime = chapters[i].start; }catch(e){}
+    v.muted = true;
+    v.playsInline = true;
     const playPromise = v.play();
     if(playPromise && playPromise.catch) playPromise.catch(()=>{});
     v.classList.add('is-playing');
@@ -779,64 +808,94 @@ document.addEventListener('DOMContentLoaded',()=>{setupSmartSelects();setupMulti
   function startFilm(){
     if(started) return;
     started = true;
+    hasVisited = true;
     hero.classList.add('has-started');
     hint.classList.add('hidden');
+    finalCard.classList.remove('show');
     setChapter(0);
-    if(timer) cancelAnimationFrame(timer);
-    tick();
+    stopTimer();
+    timer = requestAnimationFrame(tick);
+  }
+
+  function finishFilm(){
+    finished = true;
+    stopTimer();
+    shots[active].classList.remove('is-playing');
+    try{shots[active].pause()}catch(e){}
+    progress.style.width = '100%';
+    lines.forEach(line=>line.classList.remove('active'));
+    finalCard.classList.add('show');
   }
 
   function tick(now){
-    if(finished) return;
+    if(!started || finished) return;
     const v = shots[active];
     const elapsed = (now - chapterStartedAt) / 1000;
     const chapterDuration = chapters[active].end - chapters[active].start;
     const overallBefore = chapters.slice(0,active).reduce((a,c)=>a+(c.end-c.start),0);
-    const overallTotal = chapters.reduce((a,c)=>a+(c.end-c.start),0);
-    const pct = Math.min(100,((overallBefore + Math.min(elapsed,chapterDuration))/overallTotal)*100);
+    const pct = Math.min(100,((overallBefore + Math.min(elapsed,chapterDuration))/totalDuration)*100);
     progress.style.width = pct + '%';
 
     if(elapsed >= chapterDuration){
       if(active < shots.length-1){
-        shots[active].classList.remove('is-playing');
         setChapter(active+1);
       }else{
-        finished = true;
-        shots[active].classList.remove('is-playing');
-        progress.style.width='100%';
-        lines.forEach(line=>line.classList.remove('active'));
-        finalCard.classList.add('show');
-        try{v.pause()}catch(e){}
+        finishFilm();
         return;
       }
     }
     timer = requestAnimationFrame(tick);
   }
 
-  const startOnInteraction = ()=>startFilm();
+  function startOnInteraction(){
+    if(!started && !finished) startFilm();
+  }
 
-  window.addEventListener('scroll', startOnInteraction, {passive:true, once:true});
-  window.addEventListener('wheel', startOnInteraction, {passive:true, once:true});
-  window.addEventListener('touchstart', startOnInteraction, {passive:true, once:true});
-  window.addEventListener('pointerdown', startOnInteraction, {passive:true, once:true});
-  window.addEventListener('keydown', startOnInteraction, {once:true});
+  // Any first interaction can start the film if browser autoplay is blocked.
+  // These listeners stay available for the whole page lifetime; once the film
+  // has started they do nothing, and the IntersectionObserver handles replay.
+  ['scroll','wheel','touchstart','pointerdown','keydown'].forEach(type=>{
+    window.addEventListener(type, startOnInteraction, {passive:type !== 'keydown'});
+  });
 
-  /* Muted autoplay is attempted first. If the browser blocks it, the
-     first touch/scroll still starts the complete sequence. */
-  window.addEventListener('DOMContentLoaded', ()=>{
+  /* Try autoplay on first load. If blocked, first interaction starts it. */
+  const tryInitialAutoplay = ()=>{
     const first = shots[0];
+    first.muted = true;
+    first.playsInline = true;
     const p = first.play();
     if(p && p.then){
-      p.then(()=>{
-        if(!started) startFilm();
-      }).catch(()=>{});
+      p.then(()=>{ if(!started) startFilm(); }).catch(()=>{});
     }
-  }, {once:true});
+  };
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', tryInitialAutoplay, {once:true});
+  }else{
+    tryInitialAutoplay();
+  }
+
+  /* New cinematic episode whenever the visitor leaves the hero and comes back. */
+  const observer = new IntersectionObserver((entries)=>{
+    const entry = entries[0];
+    if(!entry.isIntersecting){
+      if(hasVisited) wasOutside = true;
+      return;
+    }
+
+    // The hero has been left and then brought back into view. Start a brand-new
+    // cinematic episode automatically — no reload and no playback button.
+    if(wasOutside){
+      wasOutside = false;
+      resetFilm();
+      requestAnimationFrame(()=>startFilm());
+    }
+  }, {threshold:[0,0.45,0.8]});
+  observer.observe(hero);
 
   shots.forEach(v=>{
     v.addEventListener('loadedmetadata', ()=>{
-      v.muted=true;
-      v.playsInline=true;
+      v.muted = true;
+      v.playsInline = true;
     });
   });
 })();
